@@ -1,4 +1,4 @@
-html {
+#container {
 	font-family: "Courier New", Courier, monospace;
 	text-shadow: 1px 1px #979899;
 	background: url(../images/agsquare_@2X.png);
@@ -14,7 +14,7 @@ h2 {
 	font-weight: bold;
 }
 
-a:hover {
+footer a:hover {
 	color:red;
 	font-weight: bolder;
 }

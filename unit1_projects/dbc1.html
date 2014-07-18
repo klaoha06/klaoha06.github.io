@@ -2,10 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../blog-posts/css/app.css"/>
 	<link type="text/css" rel="stylesheet" href="stylesheets/dbc1.css"/>
+	<script src="../blog-posts/bower_components/modernizr/modernizr.js"></script>
 	<title>Portfolio</title>
 </head>
 <body>
+<div class="row">
+		<div class="large-12 columns">
+			<div class="nav-bar right">
+				<ul class="button-group">
+					<li><a href="../index.html" class="button">Index</a></li>
+					<!-- <li><a href="#" class="button">Link 4</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
 <div id="container">
 <h1>Supakorn Laohasongkram</h1>
 <div id="me"><img id="me" src="images/me.jpg"></div>
@@ -34,5 +46,13 @@
 <figcaption></figcaption>
 <h6>CIAO!</h6>
 </div>
+<script src="../blog-posts/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../blog-posts/bower_components/foundation/js/foundation.js"></script>
+<script>
+	$(document).foundation();
+
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
 </body>
 </html>

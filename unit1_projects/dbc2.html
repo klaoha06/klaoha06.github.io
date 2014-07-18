@@ -2,10 +2,24 @@
 <html>
 <head>
 	<title>Things I Learn Thus Far</title>
+	<link rel="stylesheet" href="../blog-posts/css/app.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesheets/dbc2.css">
+	<script src="../blog-posts/bower_components/modernizr/modernizr.js"></script>
+
 </head>
 <div id="container">
+	<body>
 	<header>
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="nav-bar right">
+				<ul class="button-group">
+					<li><a href="../index.html" class="button">Index</a></li>
+					<!-- <li><a href="#" class="button">Link 4</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
 		<div id="title">
 			<h1>Things I Learn Thus Far, From Prep Til Now...</h1>
 			<h2>Finding The <span style="color:red">Right</span> Attitude!</h2>
@@ -17,7 +31,7 @@
 
 		</div>
 	</header>
-	<body>
+
 		<div id="main">
 			<div id="content">
 				<p>
@@ -39,4 +53,12 @@
 		<a href="https://www.facebook.com/kornslife?ref=hl"><img style="width:100px; height:100px; margin:10px" src="images/like.png"></a>
 	</footer>
 </div> <!-- container -->
+<script src="../blog-posts/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../blog-posts/bower_components/foundation/js/foundation.js"></script>
+<script>
+	$(document).foundation();
+
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
 </html>
