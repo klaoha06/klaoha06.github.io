@@ -1,0 +1,72 @@
+html {
+	font-family: "Courier New", Courier, monospace;
+	text-shadow: 1px 1px #979899;
+	background: url(../images/agsquare_@2X.png);
+}
+
+h1{
+	font-size: 1.7em;
+}
+
+h2 {
+	text-decoration: underline;
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+a:hover {
+	color:red;
+	font-weight: bolder;
+}
+
+#quote {
+	font-style: italic; 
+	font-size: 1.6em;
+}
+
+#quote img {
+	box-shadow: 5px 5px black;
+	height: 100px;
+	width: 100px;
+}
+
+#container {
+	text-align: center;
+}
+
+/*Content*/
+#main {
+	width: 750px;
+	background: url(../images/kc2.png) no-repeat center;
+	background-size: contain;
+	background-color: #61A7E0;
+	padding: 50px 80px;
+	margin: 0 auto;
+	box-shadow: 10px 10px black;
+
+}
+
+#content {
+	margin: 0 auto;
+	float: inherit;
+}
+
+#content p {
+	font-size: 1.2em;
+	line-height: 160%;
+	text-indent:50px;
+	font-weight: bold;
+}
+
+footer {
+	margin:30px;
+}
+
+aside {
+	float: right;
+}
+
+header {
+
+}
+
