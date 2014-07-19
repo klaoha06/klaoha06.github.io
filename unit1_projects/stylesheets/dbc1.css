@@ -6,7 +6,7 @@ html {
 	border: 10px solid black;
 	padding: 10px;
 	line-height: 140%;
-	font-family: JS-Duangta;
+	font-family: zhukov_zippo;
 }
 
 #me img {
@@ -17,6 +17,6 @@ html {
 @font-face{
     font-family: "JS-Duangta";
     src: url('JS-Duangta.ttf');
-    font-family: "JS-Angsumalin";
-    src: url('JS-Angsumalin.ttf');
+    font-family: "zhukov_zippo";
+    src: url('zhukov_zippo.otf');
 }
