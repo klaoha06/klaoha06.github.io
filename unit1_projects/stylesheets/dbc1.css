@@ -12,3 +12,10 @@ html {
 	width: 600px;
 	height: 800px;
 }
+
+@font-face{
+    font-family: "JS-Duangta";
+    src: url('JS-Duangta.ttf');
+    font-family: "JS-Angsumalin";
+    src: url('JS-Angsumalin.ttf');
+}
