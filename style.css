@@ -1,15 +1,13 @@
 @font-face{
-    font-family: "labtop";
-    src: url('fonts/labtop_secundo/LABTSECW.ttf');
+    font-family: "yo";
+    src: url('fonts/font1.woff');
 }
-@font-face{
-    font-family: "quarca";
-    src: url('fonts/quarca/QuarcaNormRegular.otf');
-}
+
 @font-face{
 	font-family: "tech3";
 	src: url('fonts/Squared%20Display.ttf');
 }
+
 body {
 background: url('unit1_projects/images/graphy/graphy.png');
 }
@@ -81,18 +79,17 @@ nav li {
 	margin-top: 32px;
 	margin-right: 20px;
 	display: inline-block;
-/*	background-color: yellow;
-*/
+
 }
 .column {
-/*	border: 1px black solid;
-*/	width: 200px;
+	width: 200px;
 	background-color: white;
 	padding: 15px;
-	font-family: quarca;
+	font-family: yo;
+	font-size: 1em;
 	float:left;
 	margin-left: 40px;
-	min-height: 300px;
+	min-height: 380px;
 }
 .column p {
 	line-height: 130%;
@@ -114,7 +111,7 @@ footer {
 	display: inline;
 	width:60%;
 	text-align: center;
-	font-family: quarca;
+	font-family: yo;
 	font-size: 1em;
 	margin: 20px;
 	padding-right: 320px;
