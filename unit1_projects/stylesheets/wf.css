@@ -1,0 +1,17 @@
+html {
+	text-align: center;
+}
+
+h1 {
+	font-size: 2em;
+	text-decoration: underline;
+}
+
+li {
+	line-height: 140%;
+}
+
+figcaption {
+	font-size:.8em;
+	font-style: italic;
+}
