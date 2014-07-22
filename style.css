@@ -62,9 +62,9 @@ nav {
 }
 nav li {
 	font-family: tech3;
-	font-size: .9em;
+	font-size: .8em;
 	font-weight: bolder;
-	margin-bottom: 10px;
+	margin-top: 15px;
 }
 #me {
 	margin: 10px 20px 20px 20px;
@@ -106,13 +106,13 @@ nav li {
 }
 .text_line {
     clear: both;
+    margin-top: 40px;
 }
 footer {
 	display: inline;
 	width:60%;
 	text-align: center;
 	font-family: yo;
-	font-size: 1em;
-	margin: 20px;
 	padding-right: 320px;
+	font-size: .8em;
 }
