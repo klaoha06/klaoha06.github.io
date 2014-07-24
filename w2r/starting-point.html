@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <script src="js/isotope.pkgd.min.js"></script>
+  <title>Responsive Design and Fluid Layouts</title>
+</head>
+<body>
+  <header>
+    <div class="nav-bar-container">  
+      <nav class="responsive-navbar">
+        <ul>
+          <li id="logo"><a href="starting-point.html"><img style="width: 180px;" src="img/logo.png"></a></li>
+          <li><h3><a href="starting-point.html">Home</a></h2></li>
+          <li><h3><a href="http://klaoha06.github.io/">Korn's Git</a></h3></li>
+          <li><h3><a href="http://kprakobkit.github.io/">Peter's Git</a></h3></li>
+        </ul>
+      </nav>
+    </div>
+    <hr/>
+  </header>
+
+  <div id="gridcontainer" class="js-isotope" data-isotope-options='{ "columnWidth": 500, "itemSelector": ".box" }'>  
+    <div class="box responsive-design">
+      <h2>Responsive Design</h2>
+      <h4 id="name">By: Supakorn Laohasongkram and Peter Prakobkit</h4>
+      <p>
+        Web development was never easy. Media outlets are changing each day. There are also many broswer options available. Inconsistent window widths, screen resolutions, browser specific styles, and user installed fonts are but a few nuiances web developers have to put up with when making their content available through the web. Users no long only use the desktop to browse the web; the percentage of users that use mobile browsers are as much, if not already more than desktop browsers. Because of this, it becomes imperative for the designer to take all these factors into consideration when creating a web page, hence responsive design. 
+      </p><br>
+      <p>
+        Responsive design is an apporach aimed at creating web pages to provide an optimal user experience, that is content and layout adapts to the context and environment of the user. For a website that has been responsively designed, the layout of the page on a mobile device is different than when viewing it from a desktop. The font increases, the margin decreases, the image scales down properly, it utilizes a linear layout, as opposed to a 4-grid layout on the desktop. More importantly, responsive design also allows designers to cater different content to different media outlets, i.e. a user viewing the page from a mobile device may be looking for different content than someone viewing it from a tablet. This eliminates the need to developer different solutions for different media types for each new web page.
+      </p><br>
+      <p>
+        Responsive design accomplishes this via three technical components: flexible images, media queries, and fluid layout. 
+      </p><br>
+      <h3>Flexible Images</h3>
+      <p>
+        Flexible images enables images to resize proportionately based on the screen or browser size. An example of this is accomplished via setting an image's max-width property to 100%. However, since speed and efficiency in loading a web page is a big concern in web design, this solution may be an issue. An alternative is a technique presented by the Filament Group, makes a few image files available depending on the screen size.  
+      </p><br>
+      <h3>Media Queries</h3>
+      <p>
+        Media Queries is a CSS3 module that consists of a media type (screen, tv, etc.) and at least one conditional expression that tells the style to apply certain styles to attributes of the html elements based on the condition, for example, the width, color, and height of a div class.
+      </p><br>
+      <h3>Grid Layouts</h3>
+      <p>There are couple of css framework that implement grid-layout. These layouts are useful when dealing with responsive design. When the screen is big these grids lay side by side. However, when the screen are small the stack on one another to fit the smaller screen. These grids make design responsive web simpler and easier to implement than ever.</p><br>
+    </div> <!-- Responsive Design -->
+
+    <div class="box fluid-layouts">
+      <h2>Fluid Layouts</h2>
+      <p>Fluid layouts is one type of layout possible to use or mix and match in order to create a responsive website. Interestingly, fluid layouts--if done correctly--could handle all types of screen and resolution with its silky smooth transit. This is one of the main advantages of the fluid layout over the fixed layout where often time the fixed layout feels very "snappy" and you could see a lot of drastic moving pieces flying across the page when changing resolution. The way fluid layouts does this begins by thinking differently: from thinking website in fixed unit like pixel to thinking in ratio and percentage.<a href="#5"><sub>5</sub></a></p><br>
+
+      <p>Personally, thinking of website in term of percentage seems like a more slippery object to the finite unit like pixel. Nevertheless, this could be more intuitive than you thought!</p><br>
+
+      <p>All in all, this is not to say that fluid layouts is <span style="font-weight:bold;">the way</span> to go when trying to create a responsive website. It is definitely one of the possible ways. Personally, I prefered mix and matching approach between different types of method to achieve a responsive design; since these method all have its advantages and disadvatages depending on what you are trying to ultimately achieve.<a href="#6"><sub>6</sub></p><br>
+
+      <p>If you would like an example of a website created using the fluid layout, here you go: <a href="http://simplebits.com/"></a>Sample Fluid Layout</p><br>
+
+    </div><!-- fluid-layouts -->
+
+    <div class="box reflection">
+      <h2>Reflection</h2>
+      <p>The introduction of smartphones and tablet has revolutionized everything in web developing. If one researchs on Google to see the demographic of what type of devices people are using to open a web page, one will quickly realize that it is not enough just to design for one specific device or screen resolution because you could easily be missing more than half the audience who might wanted to see your website. And there is a definite trend of more people using more smartphones and tablets to access a website.<a href="#1"><sub>1</sub></a> So in order to accomodate all of the possible audiences across all platforms as well as to be prepared for the future, making your site responsive is mandatory. </p><br>
+
+      <p>And thus far, we have been creating html files which have one static look in mind. But it is one thing when making a website to look great on one type of screen; and another, when you are trying to make a website to looks good on ALL types or sizes the screen. So the implementation was not easy.</p><br>
+
+      <p>In this lesson, we also looked at accessibility for all type of users, and this includes people are are color-blind, deaf or visually impaired. This information might be new to someone. But it is possible for people who are visually impaired to surf the web. They do this by listening to the transcript of the words written on sites. For web developers, I believe it is our responsbility to offer these people their rights to surf the web regardless of whether we would like or not like to design our webs for them.</p><br>
+
+      <p>This has been my first time I ever to simultanoesly work with someone on a website. Thus, the next challenge that came up was how to collaborate work through Github. Of course, we could have used emails. But my pair and I were right on the same page: we were in charged of our education and we desire to do things the right way. We didn't take the quick way out, but instead stick to it and got our feet wet with the Github. It was totally worth it. We learn from how to merge the files, to making pull request, and branching from master, move to different branches, creating branches, and many more.</p><br>
+
+      <p>It's been said before that there is benefit in pairing. But that was theoretical until you actually do it. Pairing with my partner in this excercise help me to learn many of the new tricks that my partner has been implementing as well as new local program that he used in his workflow.</p><br>
+
+      <p>Excercise wise, it was fairly a well designed excercise with one minor hipcup. For me, it would have been much better if we knew we have to research and wrote something about responsive design and fluid-layouts prior to pairing. Because when we paired we both were ready on our driver and navigator seat ready to rock some codes. And once we open the starting point file we soon realize we have to do some research before that. So that pairing session just ended very short and we have to reschedule again after we both had our content and ready to share it to one another and finally getting on with our code.</p><br>
+    </div>
+
+    <div class="box references">
+      <h2>References</h2>
+      <ul>
+        <li>
+          <li><a name="1">1 </a><a href="http://techcrunch.com/2013/10/30/nearly-half-48-of-daily-users-of-facebook-are-now-mobile-only-says-ceo-zuckerberg/" target="_blank">Mobile data on Facebook users</a></li>
+          <li><a name="2">2 </a><a href="http://alistapart.com/article/responsive-web-design" target="_blank">A List Apart: Responsive Web Design</a></li>
+          <li><a name="3">3 </a><a href="http://www.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/#more-75660">Smashing Magazine</a></li>
+          <li><a name="4">4 </a><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">Media Queries</a></li>
+          <li><a name="5">5 </a><a href="http://www.creativebloq.com/css3/create-fluid-layouts-html5-and-css3-3142768">Creating Fluid Layout</a></li>
+          <li><a name="6">6 </a><a href="http://www.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/">What's the Right Layout for you?</a></li>
+        </ul>
+      </div>
+
+
+      <hr class="box g-width"/>
+      <div class="box clear conclusion">
+        <h2>Your Conclusion</h2>
+        <p>
+          Responsive design is now more important than ever. With the proliferation of different media screens and outlets, web designers need to take into account all the different venues that the user may view their content. Instead of designing multiple versions for different devices, the designer can use the responsive design approach to create content that will adapt to the user's environment and context. This ultimately allows the designer to work more efficiently, while providing more value for the end user.
+        </p>
+
+      </div>
+
+      <footer class="box g-width">
+        <p>&copy; Copyrights RDKP 2014</p>
+      </footer>
+    </div>
+  </body>
+  </html>

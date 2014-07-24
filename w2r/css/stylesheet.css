@@ -1,0 +1,224 @@
+/*=========Reset===========*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=========Stylesheet===========*/
+
+body {
+	background:url('../img/bedge_grunge/bedge_grunge.png');
+	font-family: yo;
+	text-align: justify;
+	line-height: 140%;
+}
+
+@font-face{
+    font-family: "yo";
+    src: url('../font/font1.woff');
+}
+
+/*@font-face{
+    font-family: "monogly";
+    src: url('font/Monoglyceride.ttf');
+}*/
+
+#gridcontainer {
+	width: 80%;
+	margin: 0 auto;
+}
+
+a:link {
+		color:black;
+		text-decoration: none;
+
+}
+
+a:visited {
+		color:black;
+		text-decoration: none;
+}
+
+a:hover{
+	color:black;
+	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+	text-decoration: none;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	width:80%;
+	margin-bottom: 30px;
+}
+
+h3 {
+	font-size: 1.3em;
+	margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 3em;
+	line-height: 130%;
+	margin-bottom: 20px;
+}
+
+.clear {
+	clear:both;
+	padding: 20px;
+
+}
+
+
+.box {
+	width:46%;
+	padding: 0 2%;
+}
+
+sub {
+	font-size: .5em;
+}
+
+/*---nav-bar---*/
+
+.nav-bar-container {
+	text-align: center;
+	font-family: yo;
+}
+.responsive-navbar ul {
+	padding: 0;
+}
+.responsive-navbar ul li{
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+	padding-bottom: 32px;
+}
+
+#logo {
+	padding-top: 0;
+	position: relative;
+	top:24px;
+}
+
+/*First responsive media query*/
+@media (max-width: 1040px) {
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+.box {
+	width:90%;
+	padding: 20px;
+	margin: 0 auto;
+}
+}
+
+@media (max-width: 828px) {
+.container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.responsive-navbar ul li {
+	display: block;
+	margin: 0 auto;
+}
+
+.box {
+	width:90%;
+	padding: 0 20px;
+	margin: 0 auto;
+	text-align: justify;
+}
+
+.box h2 {
+	text-align: center;
+}
+
+}
+
+
+/*---content---*/
+
+#name {
+	margin: 20px 0;
+	font-size: .9em;
+	font-style: italic;
+}
+
+
+.conclusion {
+	text-align: justify;
+	width: 98%;
+}
+
+.conclusion h2 {
+	text-align: center;
+}*/
+
+.references {
+	line-height: 160%;
+}
+
+
+/*---footer---*/
+
+.g-width {
+	padding: 0;
+	margin: 30px 0;
+	width: 100%;
+}
+
+
+footer {
+	text-align: center;
+	font-size: .8em;
+}
+

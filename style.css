@@ -1,3 +1,57 @@
+/*=========Reset===========*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=========stylesheet==========*/
+
+
 @font-face{
     font-family: "yo";
     src: url('fonts/font1.woff');
@@ -12,9 +66,8 @@ body {
 background: url('unit1_projects/images/graphy/graphy.png');
 }
 #container {
-	margin: 0 auto;
-	width: 100%;
-	display: inline;
+	margin: 0 8% 0 4%;
+	width: 88%;
 }
 /*header*/
 h1 {
@@ -22,22 +75,22 @@ h1 {
 	font-family: labtop;
 	text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
 }
-.column7 {
-	width: 66%;
-}
+
 #title {
-	float:right;
-	padding-right: 70px;
+	width: 70%;
+	text-align: left;
 	margin: 25px auto;
+	margin-left: 27%;
+	text-align:center;
 }
 .red {
 	color:red;
 }
 /*nav*/
 .sidebar {
-	width:240px;
-	min-height: 500px;
-	margin-left: 40px;
+	float:left;
+	text-align: center;
+	width: 25%;
 }
 nav a {
 	text-decoration: none;
@@ -57,42 +110,35 @@ a:hover {
 nav {
 	text-align: center;
 	font-size: 2em;
-	float: left;
-	padding: 50px 0 0 0;
 }
 nav li {
 	font-family: tech3;
 	font-size: .8em;
 	font-weight: bolder;
-	margin-top: 15px;
+	padding: 8px 20px;
 }
 #me {
-	margin: 10px 20px 20px 20px;
-	width:150px;
-	height:150px;
+	width: 160px;
+	margin: 10px 0;
 	border-radius: 360px;
 	border: 3px solid black;
 	box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
-.wrapper {
-	width: 240px;
-	margin-top: 32px;
-	margin-right: 20px;
-	display: inline-block;
 
+#gridcontainer {
+	margin-left: 27%;
 }
+
 .column {
-	width: 200px;
 	background-color: white;
-	padding: 15px;
 	font-family: yo;
 	font-size: 1em;
-	float:left;
-	margin-left: 40px;
-	min-height: 380px;
+	width: 24%;
+	padding:1.5%;
+	margin: 1% 20px 5% 20px;
 }
-.column p {
-	line-height: 130%;
+.column p, .column li {
+	line-height: 150%;
 	text-align: justify;
 }
 .right {
@@ -106,13 +152,63 @@ nav li {
 }
 .text_line {
     clear: both;
-    margin-top: 40px;
 }
 footer {
-	display: inline;
-	width:60%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 25%;
 	text-align: center;
 	font-family: yo;
-	padding-right: 320px;
 	font-size: .8em;
+}
+
+@media (max-width: 1046px) {
+#container {
+	margin: 0 auto;
+}	
+.column {
+	width: 35%;
+	padding: 20px;
+}
+
+#title {
+	width: 100%;
+	margin-left: 0;
+}
+footer {
+		margin-left: 0;
+}
+
+
+}
+
+@media (max-width: 830px) {
+#container {
+	margin: 0 auto;
+}	
+
+.sidebar {
+	display: block;
+	float:none;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#gridcontainer {
+	margin-left: 0;
+}
+
+.column {
+	width: 80%;
+	padding: 20px;
+}
+
+#title {
+	width: 100%;
+	margin-left: 0;
+}
+footer {
+		margin-left: 0;
+}
+
 }
