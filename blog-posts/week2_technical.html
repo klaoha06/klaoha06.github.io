@@ -1,0 +1,150 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Korn's Tech Blog</title>
+	<link rel="stylesheet" href="css/app.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+<body name="top">
+
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="nav-bar right">
+				<ul class="button-group">
+					<li><a href="../index.html" class="button">Index</a></li>
+				</ul>
+			</div>
+			<h1 id="title">Korn's Tech Blog</h1>
+			<hr/>
+		</div>
+	</div>
+
+
+	<div class="row">
+
+		<div class="large-9 columns" role="content">
+			<article>
+				<h2>CSS Syntax: Display: Inline VS. Display Inline-Block</h2>
+				<h6>Written by <a href="https://www.facebook.com/supakorn.laohasongkram">Supakorn Laohasongkram</a> on July 25th, 2014</h6>
+
+				<p>Positioning blocks of HTML using CSS can be difficult when you are new! Fear not! In this article, let's learn about one of the most essential CSS syntax called "display." This syntax accepts many arguments, however, we will touch upon two of them which are display: inline; and display: inline-block;. What do they do? and how are they different? And how and when do we use them? These will be answered! So let's begin by looking what is the display syntax.</p>
+<h3>CSS: Display Syntax</h3>
+				<p>In a HTML file, there are many elements. These elements are object of a html file. They are blocky and could contain many different content in them. For example, videos, images, text, tables, and many more! But how do we arrange them? This is where the dispaly tag in CSS comes in! <b>The display tag in CSS helps you to arrange these elements.</b> Below are the two ways that the display syntax could arrange elements.</p>
+
+				<div style="width: 700px; margin: 10px;">
+<fieldset style="width: 150px; display:inline-block">
+  <legend><b><tt>display: block</tt></b></legend>
+  <div style="width: 60px; display: block; background-color: red; border: 3px solid black;">display: block</div>
+  <div style="width: 60px; display: block; background-color: red; border: 3px solid black;">display: block</div>
+  <div style="width: 60px; display: block; background-color: red; border: 3px solid black;">display: block</div>
+</fieldset>
+
+<fieldset style="width: 230px; display:inline-block; vertical-align: top">
+  <legend><b><tt>display: inline</tt></b></legend>
+  <div style="width: 60px; display: inline; background-color: red; border: 3px solid black;">display: inline</div>
+  <div style="width: 60px; display: inline; background-color: red; border: 3px solid black;">display: inline</div>
+  <div style="width: 60px; display: inline; background-color: red; border: 3px solid black;">display: inline</div>
+</fieldset>
+
+<fieldset style="width: 230px; display:inline-block; vertical-align: top">
+  <legend><b><tt>display: inline-block</tt></b></legend>
+  <div style="width: 60px; display: inline-block; background-color: red; border: 3px solid black;">display: inline-block</div>
+  <div style="width: 60px; display: inline-block; background-color: red; border: 3px solid black;">display: inline-block</div>
+  <div style="width: 60px; display: inline-block; background-color: red; border: 3px solid black;">display: inline-block</div>
+</fieldset>
+</div>
+<h3>Display: inline;</h3>
+				<p style="font-style: italic;">In your css file that is linked to your html write this:</p>
+				<pre>[selector] { display: inline; }</pre><br>
+				<p>Displaying elements inline has a very similar feeling as to writing something on a paper. Just like when you are writing, you start from your left to your right and (mostly) stay on the same horizontal straight line with the same height. You don't stack your character like writing Chinese or Japanese. It strings from left to right!</p>
+
+<h3>Display: inline-block;</h3>
+				<p style="font-style: italic;">In your css file that is linked to your html write this:</p>
+
+				<pre>selector { display: inline-block; }</pre><br>
+				<p>As you see from the example above displaying elements in "block" causes the elements to stack on top of another. This is because block elements force line break after each block element. So you get a nice stack of elements on top of one another.</p>
+
+				<p>And inline-block blocks combine the two arguments together: the elements are displaying as block however they are block which does not force line break after each elements. So we have blocks of elements which are inline. Pretty need huh?</p>
+
+<h3>Conclusion</h3>
+
+<p>According to Stackoverflow, this is the major attritube of this syntax:</p>
+
+<h3>Inline elements:</h3>
+
+<li>respect left & right margins and padding, but not top & bottom</li>
+<li>cannot have a width and height set</li>
+<li>allow other elements to sit to their left and right.</li>
+<h3>Block elements:</h3>
+
+<li>respect all of those</li>
+<li>force a line break after the block element</li>
+<h3>Inline-block elements:</h3>
+
+<li>allow other elements to sit to their left and right</li>
+<li>respect top & bottom margins and padding</li>
+<li>respect height and width</li><br>
+
+<p>According to W3 School,
+
+An inline element has no line break before or after it, and it tolerates HTML elements next to it.
+
+A block element has some whitespace above and below it and does not tolerate any HTML elements next to it.
+
+An inline-block element is placed as an inline element (on the same line as adjacent content), but it behaves as a block element.</p>
+
+
+		</article>
+	</div>
+
+
+	<aside class="large-3 columns">
+		<div class="panel">
+		<img id="me" src="../unit1_projects/images/logo.jpg">
+			<p style="font-size: .8em; margin-top:20px;">Hi, I am Korn, a beginner web developer and designer! Any helps are welcomed!</p>
+			<a href="#"></a>
+		</div>
+		<h5>Reference</h5>
+		<ul class="side-nav">
+			<li><a href="http://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block">Stackoverflow: css-display-inline-vs-inline-block</a></li>
+			<li><a href="http://dustwell.com/div-span-inline-block.html">div-span-inline-block</a></li>
+			<li><a href="http://www.w3schools.com/cssref/pr_class_display.asp">W3School	</a></li>
+		</ul>
+
+	</aside>
+
+</div>
+
+
+<footer class="row">
+	<div class="large-12 columns">
+		<hr/>
+		<div class="row">
+			<div class="large-6 columns">
+				<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
+			</div>
+			<div class="large-6 columns">
+				<ul class="inline-list right">
+					<li><a href="#top">To Top</a></li>
+<!-- 					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.js"></script>
+<script>
+	$(document).foundation();
+
+	var doc = document.documentElement;
+	doc.setAttribute('data-useragent', navigator.userAgent);
+</script>
+</body>
+</html>

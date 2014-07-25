@@ -21,3 +21,17 @@ body {
 li {
 	line-height: 140%;
 }
+
+#me {
+	border-radius: 360px;
+	border: 3px solid black;
+	box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+}
+
+.panel {
+	width:90%;
+	box-shadow: 10px 10px black;
+}
