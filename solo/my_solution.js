@@ -189,7 +189,7 @@
 // Refactored Code
 
 var start = '<h4>Welcome</h4><br><p>Before you enter the Seven Kingdoms, please show some IDs and swear by the Old Gods and New that you will completely and truthfully fill out your fake information below.</p><br>'
-start += '<form name="userInfo"><label>Your name:</label><input type="text" name="uname" value="x"/><br><label>Your House name:</label><input type="text" name="house" value="x" /><br><label>Who do you think is the hottest woman in Westeros?</label><input type="text" name="woman" value="x" /><br><label>The name of your worst nemesis</label><input type="text" name="wn" value="x" /><br><label>One quality of your worst nemesis</label><input type="text" name="wnn" value="x"/><br><input type="button" value="Done! Let\'s Get Started" onClick="initStory()"/></form>'
+start += '<form name="userInfo"><label>Your name:</label><input type="text" name="uname" value=""/><br><label>Your House name:</label><input type="text" name="house" value="" /><br><label>Who do you think is the hottest woman in Westeros?</label><input type="text" name="woman" value="" /><br><label>The name of your worst nemesis</label><input type="text" name="wn" value="" /><br><label>One quality of your worst nemesis</label><input type="text" name="wnn" value=""/><br><input type="button" value="Done! Let\'s Get Started" onClick="initStory()"/></form>'
 document.getElementById("story").innerHTML = start;
 function initStory() {
 	var username = document.userInfo.uname.value;

@@ -77,7 +77,16 @@ a:visited {
 img {
 	box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
-
+nav a {
+	margin-left: 5px;
+	padding:5px;
+	background-color: white;
+	font-size: 1em;
+	line-height: 140%;
+	box-shadow: 5px 5px black;
+	color: white;
+	border: 1px black solid;
+}
 #container {
 	width:85%;
 	margin: 0 auto;
