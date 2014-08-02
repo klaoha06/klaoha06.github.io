@@ -5,27 +5,37 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Korn's Tech Blog</title>
-	<link rel="stylesheet" href="css/app.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
 	<script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 <body name="top">
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<nav class="tab-bar">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				</section>
+			</nav>
 
-	<div class="row">
-		<div class="large-12 columns">
-			<div class="nav-bar right">
-				<ul class="button-group">
-					<li><a href="../index.html" class="button">Index</a></li>
-					<!-- <li><a href="#" class="button">Link 4</a></li> -->
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					<li><label>Projects</label></li>
+					<li><a href="../unit1_projects/dbc1.html">DBC1</a></li>
+					<li><a href="../unit1_projects/dbc2.html">DBC2</a></li>
+					<li><a href="../unit1_projects/wireframe_sites.html">Wireframing</a></li>
+					<li><a href="../unit1_projects/my_wireframe.html">Site Planning</a></li>
+					<li><a href="../w2r/starting-point.html">Group Responsive Design</a></li>
+					<li><a href="../gps1.1/gps1.1.html">GPS1.1</a></li>
+					<li><label>Blogs</label></li>
+					<li><a href="week1_technical.html">Technical Blog</a></li>
+					<li><a href="week1_cultural.html">Cultural Blog</a></li>
+					<li><a href="week2_technical.html">Inline or Inline-block</a></li>
+					<li><label>Game</label></li>
+					<li><a href="../solo/solo.html">The Game of Game of Thrones</a></li>
 				</ul>
-			</div>
-			<h1 id="title">Korn's Tech Blog</h1>
-			<hr/>
-		</div>
-	</div>
-
-
-	<div class="row">
+			</aside>
+			<section id="container" class="main-section">
+					<div class="row">
 
 		<div class="large-9 columns" role="content">
 			<article>
@@ -112,14 +122,14 @@
 
 
 	<aside class="large-3 columns">
-<div class="panel">
+		<div class="panel">
 		<img id="me" src="../unit1_projects/images/logo.jpg">
 			<p style="font-size: .8em; margin-top:20px;">Hi, I am Korn, a beginner web developer and designer! Any helps are welcomed!</p>
 			<a href="#"></a>
 		</div>
 		<h5>Reference</h5>
 		<ul class="side-nav">
-					<li><a href="facebook.com">Facebook</a></li>
+			<li><a href="facebook.com">Facebook</a></li>
 					<li><a href="google.com">Google</a></li>
 					<li><a href="youtube.com">youtube.com</a></li>
 		</ul>
@@ -139,18 +149,20 @@
 			<div class="large-6 columns">
 				<ul class="inline-list right">
 					<li><a href="#top">To Top</a></li>
+<!-- 					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li> -->
 				</ul>
 			</div>
 		</div>
 	</div>
 </footer>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.js"></script>
-<script>
-	$(document).foundation();
-
-	var doc = document.documentElement;
-	doc.setAttribute('data-useragent', navigator.userAgent);
-</script>
-</body>
-</html>
+					</section> <!-- container -->
+					<a class="exit-off-canvas"></a>
+				</div> 
+				<script src="../fo.js"></script>
+				<script>
+					$(document).foundation();
+				</script>
+			</body>
+			</html>

@@ -313,7 +313,6 @@ var initFight = function(pickedC) {
 						bLog += "<h4>Harry killed himself!</h4>";
 						document.getElementById("result").innerHTML += '<h4>Congratulation! The Gods have decided that you shall.. die! Your head will be chopped off and feed to the pigs tomorrow morning!</h4><br><button onClick="again()">Play Again?</button>';
 						fighterHp = false;
-						return;
 					} 
 					else {
 						bLog += "<ul>" + fighterName + " has " + fighterHp + " health left.</ul>";
@@ -328,7 +327,7 @@ var initFight = function(pickedC) {
 			}
 			if (enemyH <= 0) {
 				bLog += "<h4>and " + fighterName +" killed " + user1.sc + "!</h4>";
-				document.getElementById("result").innerHTML += '<h4>Congratulation on living! The Gods want you to live! YEAH!!</h4><br><button onClick = "again()"	>Play Again?</button>';
+				document.getElementById("result").innerHTML += '<h4>Congratulation on living! The Gods want you to live! YEAH!!</h4><br><button onClick = "again()">Play Again?</button>';
 				enemyH = false;
 			}
 			else {
@@ -342,9 +341,9 @@ var initFight = function(pickedC) {
 			var damageE = Math.floor(Math.random() * 10 + 4);
 			if (fighterHp <= 0) {
 				bLog += "<h4>" + user1.sc + " killed " + fighterName +"!</h4>";
-				document.getElementById("result").innerHTML += '<h4>Congratulation! The Gods have decided that you shall.. die! Your head will be chopped off and feed to the pigs tomorrow morning!</h4><br><button onClick="again()">Play Again?</button>';
+				document.getElementById("result").innerHTML += '<h4>Congratulation! The Gods have decided that you shall.. die! Your head will be chopped off and feed to the pigs tomorrow morning!</h4><br><button onClick = "again()">Play Again?</button>';
 				fighterHp = false;
-			} 
+			}
 			else {
 				bLog += "<ul>" + fighterName + " has " + fighterHp + " health left.</ul>";
 				youD = Math.floor(Math.random() * fighterD);
