@@ -1,0 +1,201 @@
+/*=========Reset===========*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=========stylesheet==========*/
+
+@font-face{
+    font-family: "got";
+    src: url('font/got.ttf');
+}
+body {
+	background: url('img/b5.jpg');
+}
+
+a:hover {
+	text-decoration: none;
+	color:black;
+}
+
+a:link {
+	text-decoration: none;
+	color:black;
+}
+
+a:visited {
+	text-decoration: none;
+	color:black;
+}
+
+img {
+	box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+#container {
+	width:85%;
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+p {
+	font-size: 1.3em;
+}
+
+h2 {
+	font-family: got;
+	font-size: 3em;
+	font-style: bold;
+	margin: 40px 0 30px 0;
+	line-height: 140%;
+}
+
+h3 {
+	font-family: got;
+	font-size: 1.6em;
+	font-style: bold;
+	line-height: 140%;
+}
+
+h4 {
+	font-size: 2em;
+}
+
+ul {
+	line-height: 140%;
+}
+
+#story {
+	font-size: 1.5em;
+	margin: 10px 0;
+	line-height: 130%;
+}
+
+#story label {
+	font-size: 1em;
+	line-height: 250%;
+}
+
+#cdes {
+	background: url('img/b1.png');
+	background-size: cover;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#cdes h3 {
+	padding-top: 35px;
+}
+
+#cdes h4 {
+	margin: 15px 0;
+	font-family: got;
+	font-size: 1.3em;
+}
+
+#cdes ul {
+	font-size: 1.1em;
+	padding: 0 30px;
+}
+
+hr {
+	width: 75%;
+}
+
+#image {
+	margin: 40px;
+}
+
+
+#ccontent div {
+	line-height: 120%;
+}
+
+#battlelog {
+	border: 1px solid black;
+	background:url('img/notebook.png');
+	margin-bottom: 30px;
+	width: 40%;
+	margin: 0 auto;
+}
+
+#battlelog img {
+	border: 1px black solid;
+	width: 75%;
+	margin: 10px auto;
+}
+
+#battlelog figcaption {
+
+}
+
+#battlelog h3 {
+	margin-top: 30px;
+}
+
+#battlelog h4 {
+	margin-bottom: 30px;
+}
+
+
+#result h4 {
+	margin-top: 30px;
+}
+#result button {
+	margin-bottom: 30px;
+}
+
+footer p {
+	text-align: center;
+	margin: 20px 0;
+	font-size: .9em;
+}
+
+
