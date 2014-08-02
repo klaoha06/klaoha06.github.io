@@ -68,3 +68,12 @@ li {
 	width:90%;
 	box-shadow: 10px 10px black;
 }
+
+article img {
+	box-shadow: 5px 5px black;
+	margin: 10px auto;
+}
+
+#atitle {
+	font-size: 4em;
+}
