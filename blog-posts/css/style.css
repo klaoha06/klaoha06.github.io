@@ -80,6 +80,12 @@ nav.tab-bar {
 .panel {
 	width:90%;
 	box-shadow: 5px 5px black;
+	background-color: white;
+	margin: 35px auto 20px auto;
+}
+
+.panel p {
+	text-align: center;
 }
 
 article img {
@@ -90,11 +96,12 @@ article img {
 #atitle {
 	font-size: 4.4em;
 	margin-bottom: 25px;
+	font-weight: bold;
 }
 
 #imgwrap {
 	float: right; 
-	margin: 10px 15px;
+	margin: 10px 20px;
 }
 
 footer p {
