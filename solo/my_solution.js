@@ -309,6 +309,7 @@ var initFight = function(pickedC) {
 				else {
 					bLog += "<ul>Harry is casting his spell and .... KABOOM!</ul><ul>he dealt: " + damageC + " damage to himself.</ul>";
 					fighterHp -= damageC;
+					var damageC = Math.floor(Math.random() * fighterAtk + 4);
 					if (fighterHp <= 0) {
 						bLog += "<h4>Harry killed himself!</h4>";
 						document.getElementById("result").innerHTML += '<h4>Congratulation! The Gods have decided that you shall.. die! Your head will be chopped off and feed to the pigs tomorrow morning!</h4><br><button onClick="again()">Play Again?</button>';
