@@ -13,6 +13,20 @@ body {
 	background: url('../../unit1_projects/images/graphy/graphy1.png');
 }
 
+h6 {
+	margin-bottom: 10px;
+	font-style: italic;
+}
+
+li {
+	line-height: 140%;
+}
+
+p {
+	text-indent:40px;
+	text-align: justify;
+}
+
 #title {
 	font-size: 5em;
 	margin: 10px auto;
@@ -47,12 +61,11 @@ nav.tab-bar {
 	box-shadow: 5px 5px red;
 }
 
+/*main*/
+
+
 .main-section {
 	padding: 40px;
-}
-
-li {
-	line-height: 140%;
 }
 
 #me {
@@ -66,14 +79,24 @@ li {
 
 .panel {
 	width:90%;
-	box-shadow: 10px 10px black;
+	box-shadow: 5px 5px black;
 }
 
 article img {
-	box-shadow: 5px 5px black;
+	box-shadow: 5px 5px red;
 	margin: 10px auto;
 }
 
 #atitle {
-	font-size: 4em;
+	font-size: 4.4em;
+	margin-bottom: 25px;
+}
+
+#imgwrap {
+	float: right; 
+	margin: 10px 15px;
+}
+
+footer p {
+	text-align: center;
 }
