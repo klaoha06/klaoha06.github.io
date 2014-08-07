@@ -38,21 +38,16 @@ h1 {
 	color:red;
 }
 /*nav*/
-
-ul.off-canvas-list li label {
-	text-align: center;
-	font-family: tech3;
-	font-size: 1.3em;
-	font-weight: bolder;
-	color:white;
-
-}
 ul.off-canvas-list li {
 	text-align: center;
 	font-family: tech3;
 	font-size: 1.1em;
 	font-weight: bolder;
 	color:white;
+}
+
+ul.off-canvas-list li label {
+	font-size: 1.3em;
 }
 
 ul.off-canvas-list li a:hover {
@@ -94,3 +89,69 @@ footer p {
 	font-size: .8em;
 	clear:both;
 }
+
+/*Fontello*/
+
+@font-face {
+  font-family: 'githubpage';
+  src: url('font/githubpage.eot?3001872');
+  src: url('font/githubpage.eot?3001872#iefix') format('embedded-opentype'),
+       url('font/githubpage.woff?3001872') format('woff'),
+       url('font/githubpage.ttf?3001872') format('truetype'),
+       url('font/githubpage.svg?3001872#githubpage') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'githubpage';
+    src: url('../font/githubpage.svg?3001872#githubpage') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "githubpage";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-facebook-rect:before { content: '\e800'; } /* '' */
+.icon-thumbs-up:before { content: '\e801'; } /* '' */
+.icon-facebook:before { content: '\e802'; } /* '' */
+.icon-twitter:before { content: '\e803'; } /* '' */
+.icon-twitter-bird:before { content: '\e804'; } /* '' */
+.icon-googleplus-rect:before { content: '\e805'; } /* '' */
+.icon-twitter-1:before { content: '\e806'; } /* '' */
+.icon-thumbs-down:before { content: '\e807'; } /* '' */
+.icon-facebook-squared:before { content: '\e808'; } /* '' */
+.icon-github-circled:before { content: '\e80a'; } /* '' */
+.icon-github-text:before { content: '\e80b'; } /* '' */

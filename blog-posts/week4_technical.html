@@ -45,104 +45,108 @@
 				</ul>
 			</aside>
 			<section id="container" class="main-section">
-					<div class="row">
+				<div class="row">
 
-		<div class="large-9 columns" role="content">
-			<article>
-				<h2 id="atitle">What is Enumerable in Ruby?</h2>
-				<h6>Written by <a href="https://www.facebook.com/supakorn.laohasongkram">Supakorn Laohasongkram</a> on August 7th, 2014</h6>
-				<p>
-					To enumerate means to mention one by one. Thus, enumerable means: is able to be counted or go through one after the other. And what class in Ruby could you enumerate over? (tick tock) Yes, array and hash. These are collection classes which are enumerable. It might be easy to assume that each method in Ruby is ONLY made for one particular super class. (For example, ".reverse", which could only be used with a string.) But this isn't necessary true for Enumerable. The Enumerable method works with enumerable classes; thus, it does not work only with array; but also with hash. Simply put: <span class="redcolor">Enumerable in Ruby is a set of methods made specifically for enumerable classes like array and hash. And Ruby provides a host methods to manipulate these collection.</span>
-				</p>
-				<p>
-				Let's look at one enumerable method of ".map" and apply them on both array and hash. To see how and if they actually work.
-				</p>
-				<h4>.map</h4>
+					<div class="large-9 columns" role="content">
+						<article>
+							<h2 id="atitle">What is Enumerable in Ruby?</h2>
+							<h6 id="info">Written by <a href="https://www.facebook.com/supakorn.laohasongkram">Supakorn Laohasongkram</a> on August 7th, 2014</h6>
+							<p>
+								To enumerate means to mention one by one. Thus, enumerable means: is able to be counted or go through one after the other. And what class in Ruby could you enumerate over? (tick tock) Yes, array and hash. These are collection classes which are enumerable. It might be easy to assume that each method in Ruby is ONLY made for one particular super class. (For example, ".reverse", which could only be used with a string.) But this isn't necessary true for Enumerable. The Enumerable method works with enumerable classes; thus, it does not work only with array; but also with hash. Simply put: <span class="redcolor">Enumerable in Ruby is a set of methods made specifically for enumerable classes like array and hash. And Ruby provides a host methods to manipulate these collection.</span>
+							</p>
+							<p>
+								Let's look at one enumerable method of ".map" and apply them on both array and hash. To see how and if they actually work.
+							</p>
+							<h4>.map</h4>
 
-				<h5>Using with a hash</h5>
-				<blockquote><pre>hash = {:age => 10, :height => 170, :year => 1988}<br>
-def map_hash(enumerable)<br>
-print enumerable.map { |key,value| value*10 } # => [100, 1700, 19880] <br>
-end<br>
-map_hash(hash) # => {:age=>10, :height=>170, :year=>1988} <br>
-</pre></blockquote>
+							<h5>Using with a hash</h5>
+							<blockquote><pre>hash = {:age => 10, :height => 170, :year => 1988}<br>
+								def map_hash(enumerable)<br>
+								print enumerable.map { |key,value| value*10 } # => [100, 1700, 19880] <br>
+								end<br>
+								map_hash(hash) # => {:age=>10, :height=>170, :year=>1988} <br>
+							</pre></blockquote>
 
-				<h5>Using with an array</h5>
+							<h5>Using with an array</h5>
 
-<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
-def map_array(enumerable)<br> 
-print enumerable.map { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
-end<br>
-map_array(array)<br>
-p array # => [1,55,66,700,-3,0]
+							<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
+								def map_array(enumerable)<br> 
+								print enumerable.map { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
+								end<br>
+								map_array(array)<br>
+								p array # => [1,55,66,700,-3,0]
 
-</pre></blockquote><br>
+							</pre></blockquote><br>
 
-<h4>What is the different between .each and .map?</h4>
+							<h4>What is the different between .each and .map?</h4>
 
-<p>One point that I should mention is the difference between the ".map" method and the ".each" method. They both could iterate over an array; however with one difference. ".map!" can manipulate the array or hash as it iterates over each element. While ".each" does not. Below is the example of a ".each" method and how ".each" left the original array exactly the same. (non-destructive.)</p>
+							<p>One point that I should mention is the difference between the ".map" method and the ".each" method. They both could iterate over an array; however with one difference. ".map!" can manipulate the array or hash as it iterates over each element. While ".each" does not. Below is the example of a ".each" method and how ".each" left the original array exactly the same. (non-destructive.)</p>
 
-<h5>Using .each on an array</h5>
-<blockquote><pre>array = [1,55,66,700,-3,0]<br>
+							<h5>Using .each on an array</h5>
+							<blockquote><pre>array = [1,55,66,700,-3,0]<br>
 
-def each(array) <br>
-	array.each do |i| <br>
-	p i*10 # => 10, 550, 660, 7000, -30, 0<br>
-	end<br>
-end<br>
-each(array) # => [1, 55, 66, 700, -3, 0]<br>
-</pre></blockquote>
+								def each(array) <br>
+								array.each do |i| <br>
+								p i*10 # => 10, 550, 660, 7000, -30, 0<br>
+								end<br>
+								end<br>
+								each(array) # => [1, 55, 66, 700, -3, 0]<br>
+							</pre></blockquote>
 
-<h5>Using .map! on an array</h5>
-<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
+							<h5>Using .map! on an array</h5>
+							<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
 
-def map_array(array)<br> 
-print array.map! { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
-end<br>
-map_array(array)<br>
-p array # => [10, 550, 660, 7000, -30, 0]
-
-
-</pre></blockquote>
-
-				<p>
-					In conclusion, Enumerable in Ruby is a class which could be enumerated. And if you visit the Ruby Doc page you will see a wide variety of methods that Ruby provides for this class. And don't forget the Enumerable is a class which could 
-				</p>
-		</article>
-	</div>
+								def map_array(array)<br> 
+								print array.map! { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
+								end<br>
+								map_array(array)<br>
+								p array # => [10, 550, 660, 7000, -30, 0]
 
 
-	<aside class="large-3 columns">
-		<div class="panel">
-		<img id="me" src="../unit1_projects/images/logo.jpg">
-			<p style="font-size: .8em; margin-top:20px;">Hi, I am Korn, a beginner web developer and designer! Any helps are welcomed!</p>
-			<a href="#"></a>
-		</div>
-		<h5>Reference</h5>
-		<ul class="side-nav">
-			<li><a href="http://jamesgolick.com/2008/1/5/an-introduction-to-ruby-s-enumerable-module.html">James Golick's Introduction to Ruby's Enumerable Module</a></li>
-			<li><a href="http://ruby.about.com/od/advancedruby/ss/Using-The-Enumerable-Module.htm">Using Enumerable Module</a></li>
-			<li><a href="http://ruby-doc.org/core-2.1.2/Enumerable.html#method-i-map">Ruby Doc: Enumerable</a></li>
-			<li><a href="http://kconrails.com/2010/11/30/ruby-enumerable-primer-part-1-the-basics/">Kansas City on Rails</a></li>
-			<li><a href="http://stackoverflow.com/questions/12084507/what-does-the-map-method-do-in-ruby">What does .map do in Ruby?</a></li>
-			<li><a href="http://www.slideshare.net/sarah.allen/ruby-enumerable">Ruby Enumerable, Slideshow</a></li>
-		</ul>
+							</pre></blockquote>
 
-	</aside>
-
-</div>
+							<p>
+								In conclusion, Enumerable in Ruby is a class which could be enumerated. And if you visit the Ruby Doc page you will see a wide variety of methods that Ruby provides for this class. And don't forget the Enumerable is a class which could 
+							</p>
+						</article>
+					</div>
 
 
-<footer class="row">
-	<div class="large-12 columns">
-		<hr/>
-		<div class="row">
-			<div class="large-9 columns">
-				<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
-			</div>
-			<div class="large-3 columns">
-				<ul class="inline-list right">
-					<li><a href="#top">To Top</a></li>
+					<aside class="large-3 columns">
+						<div class="panel">
+							<img id="me" src="../unit1_projects/images/logo.jpg">
+							<p>Hi, I am Korn, a beginner web developer and designer! Follow and like me from the icons below</p>
+							<hr>
+							<a href="https://www.facebook.com/kornslife?ref=hl"><i class="icon-facebook-rect"></i></a><hr>
+							<a href="https://twitter.com/klaoha06"><i class="icon-twitter-bird"></i></a><hr>
+							<a href="https://github.com/klaoha06"><i class="icon-github-circled"></i> </a><hr>
+						</div>
+						<div id="ref">
+							<h4>Reference</h4>
+							<ul class="side-nav">
+								<li><a href="http://jamesgolick.com/2008/1/5/an-introduction-to-ruby-s-enumerable-module.html">James Golick's Introduction to Ruby's Enumerable Module</a></li>
+								<li><a href="http://ruby.about.com/od/advancedruby/ss/Using-The-Enumerable-Module.htm">Using Enumerable Module</a></li>
+								<li><a href="http://ruby-doc.org/core-2.1.2/Enumerable.html#method-i-map">Ruby Doc: Enumerable</a></li>
+								<li><a href="http://kconrails.com/2010/11/30/ruby-enumerable-primer-part-1-the-basics/">Kansas City on Rails</a></li>
+								<li><a href="http://stackoverflow.com/questions/12084507/what-does-the-map-method-do-in-ruby">What does .map do in Ruby?</a></li>
+								<li><a href="http://www.slideshare.net/sarah.allen/ruby-enumerable">Ruby Enumerable, Slideshow</a></li>
+							</ul>
+						</div>
+					</aside>
+
+				</div>
+
+
+				<footer class="row">
+					<div class="large-12 columns">
+						<hr/>
+						<div class="row">
+							<div class="large-9 columns">
+								<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
+							</div>
+							<div class="large-3 columns">
+								<ul class="inline-list right">
+									<li><a href="#top">To Top</a></li>
 <!-- 					<li><a href="#">Link 2</a></li>
 					<li><a href="#">Link 3</a></li>
 					<li><a href="#">Link 4</a></li> -->
@@ -151,12 +155,12 @@ p array # => [10, 550, 660, 7000, -30, 0]
 		</div>
 	</div>
 </footer>
-					</section> <!-- container -->
-					<a class="exit-off-canvas"></a>
-				</div> 
-				<script src="../fo.js"></script>
-				<script>
-					$(document).foundation();
-				</script>
-			</body>
-			</html>
+</section> <!-- container -->
+<a class="exit-off-canvas"></a>
+</div> 
+<script src="../fo.js"></script>
+<script>
+	$(document).foundation();
+</script>
+</body>
+</html>
