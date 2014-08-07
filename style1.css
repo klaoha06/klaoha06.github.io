@@ -34,7 +34,7 @@ h1 {
 	margin: 15px auto;
 	text-align:center;
 }
-.red {
+.redcolor {
 	color:red;
 }
 /*nav*/
@@ -81,13 +81,10 @@ nav.tab-bar {
 	line-height: 150%;
 	text-align: justify;
 }
-.right {
+.red {
 	box-shadow: 10px 10px red;
 }
-.left {
-	box-shadow: 10px 10px red;
-}
-.mid {
+.black {
 	box-shadow: 10px 10px black;
 }
 footer p {

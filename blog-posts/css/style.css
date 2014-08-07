@@ -13,8 +13,16 @@ body {
 	background: url('../../unit1_projects/images/graphy/graphy1.png');
 }
 
-h6 {
-	margin-bottom: 10px;
+h4 {
+	font-weight: bold;
+}
+
+h5 {
+	text-decoration: underline;
+}
+
+#info {
+	margin-bottom: 25px;
 	font-style: italic;
 }
 
@@ -27,6 +35,11 @@ p {
 	text-align: justify;
 }
 
+img {
+	display:block; 
+	margin:0 auto;
+}
+
 #title {
 	font-size: 5em;
 	margin: 10px auto;
@@ -34,6 +47,14 @@ p {
 
 .thecontent {
 	box-shadow: 10px 10px solid black;
+}
+
+.redcolor {
+	color:red;
+}
+
+figcaption {
+	margin-bottom: 15px;
 }
 /*nav*/
 
@@ -106,4 +127,23 @@ article img {
 
 footer p {
 	text-align: center;
+}
+
+blockquote {
+	background-color: white;
+	width: 80%;
+	margin: 20px auto;
+	box-shadow: 5px 5px red;
+}
+
+.red {
+		box-shadow: 5px 5px red;
+}
+
+.black {
+		box-shadow: 5px 5px black;
+}
+
+.side-nav li {
+	line-height: 200%
 }

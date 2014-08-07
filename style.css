@@ -83,8 +83,8 @@ h1 {
 	margin-left: 27%;
 	text-align:center;
 }
-.red {
-	color:red;
+.redcolor {
+	color: red;
 }
 /*nav*/
 .sidebar {
@@ -141,13 +141,10 @@ nav li {
 	line-height: 150%;
 	text-align: justify;
 }
-.right {
+.red {
 	box-shadow: 10px 10px red;
 }
-.left {
-	box-shadow: 10px 10px red;
-}
-.mid {
+.black {
 	box-shadow: 10px 10px black;
 }
 .text_line {
