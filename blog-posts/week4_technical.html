@@ -59,51 +59,51 @@
 							</p>
 							<h4>.map</h4>
 
-							<h5>Using with a hash</h5>
-							<blockquote><pre>hash = {:age => 10, :height => 170, :year => 1988}<br>
-								def map_hash(enumerable)<br>
-								print enumerable.map { |key,value| value*10 } # => [100, 1700, 19880] <br>
-								end<br>
-								map_hash(hash) # => {:age=>10, :height=>170, :year=>1988} <br>
-							</pre></blockquote>
+<h5>Using with a hash</h5>
+<blockquote><pre>hash = {:age => 10, :height => 170, :year => 1988}<br>
+def map_hash(enumerable)<br>
+print enumerable.map { |key,value| value*10 } # => [100, 1700, 19880] <br>
+end<br>
+map_hash(hash) # => {:age=>10, :height=>170, :year=>1988} <br>
+</pre></blockquote>
 
-							<h5>Using with an array</h5>
+<h5>Using with an array</h5>
 
-							<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
-								def map_array(enumerable)<br> 
-								print enumerable.map { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
-								end<br>
-								map_array(array)<br>
-								p array # => [1,55,66,700,-3,0]
+<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
+def map_array(enumerable)<br> 
+print enumerable.map { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
+end<br>
+map_array(array)<br>
+p array # => [1,55,66,700,-3,0]
 
-							</pre></blockquote><br>
+</pre></blockquote><br>
 
-							<h4>What is the different between .each and .map?</h4>
+<h4>What is the different between .each and .map?</h4>
 
-							<p>One point that I should mention is the difference between the ".map" method and the ".each" method. They both could iterate over an array; however with one difference. ".map!" can manipulate the array or hash as it iterates over each element. While ".each" does not. Below is the example of a ".each" method and how ".each" left the original array exactly the same. (non-destructive.)</p>
+<p>One point that I should mention is the difference between the ".map" method and the ".each" method. They both could iterate over an array; however with one difference. ".map!" can manipulate the array or hash as it iterates over each element. While ".each" does not. Below is the example of a ".each" method and how ".each" left the original array exactly the same. (non-destructive.)</p>
 
-							<h5>Using .each on an array</h5>
-							<blockquote><pre>array = [1,55,66,700,-3,0]<br>
+<h5>Using .each on an array</h5>
+<blockquote><pre>array = [1,55,66,700,-3,0]<br>
 
-								def each(array) <br>
-								array.each do |i| <br>
-								p i*10 # => 10, 550, 660, 7000, -30, 0<br>
-								end<br>
-								end<br>
-								each(array) # => [1, 55, 66, 700, -3, 0]<br>
-							</pre></blockquote>
+def each(array) <br>
+array.each do |i| <br>
+p i*10 # => 10, 550, 660, 7000, -30, 0<br>
+end<br>
+end<br>
+each(array) # => [1, 55, 66, 700, -3, 0]<br>
+</pre></blockquote>
 
-							<h5>Using .map! on an array</h5>
-							<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
+<h5>Using .map! on an array</h5>
+<blockquote class="black"><pre>array = [1,55,66,700,-3,0]<br>
 
-								def map_array(array)<br> 
-								print array.map! { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
-								end<br>
-								map_array(array)<br>
-								p array # => [10, 550, 660, 7000, -30, 0]
+def map_array(array)<br> 
+print array.map! { |i| i*10 } <br>  # => [10, 550, 660, 7000, -30, 0]
+end<br>
+map_array(array)<br>
+p array # => [10, 550, 660, 7000, -30, 0]
 
 
-							</pre></blockquote>
+</pre></blockquote>
 
 							<p>
 								In conclusion, Enumerable in Ruby is a class which could be enumerated. And if you visit the Ruby Doc page you will see a wide variety of methods that Ruby provides for this class. And don't forget the Enumerable is a class which could 
