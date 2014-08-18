@@ -1,0 +1,247 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Korn's Tech Blog</title>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<link rel="stylesheet" href="css/styleSH.css"/>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body name="top">
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<nav class="tab-bar">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				</section>
+				<section class="right tab-bar-section">
+					<h6>Korn's Tech Blog</h6>
+				</section>
+			</nav>
+
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					<li><a href="../index.html"><span style="font-size: 1.5em;">Index</span></a></li>
+					<li><label>Projects</label></li>
+					<li><a href="../unit1_projects/dbc1.html">DBC1</a></li>
+					<li><a href="../unit1_projects/dbc2.html">DBC2</a></li>
+					<li><a href="../unit1_projects/wireframe_sites.html">Wireframing</a></li>
+					<li><a href="../unit1_projects/my_wireframe.html">Site Planning</a></li>
+					<li><a href="../w2r/starting-point.html">Group Responsive Design</a></li>
+					<li><a href="../gps1.1/gps1.1.html">GPS1.1</a></li>
+					<li><label>Blogs</label></li>
+					<li><a href="week1_technical.html">My Favorite Sites</a></li>
+					<li><a href="week1_cultural.html">Take Charge of Your Edu</a></li>
+					<li><a href="week2_technical.html">Inline or Inline-block</a></li>
+					<li><a href="week3_technical.html">Why Javascript?</a></li>
+					<li><a href="week3_cultural.html">Know Thy Thinking Style</a></li>
+					<li><a href="week4_technical.html">What is Enumerable in Ruby?</a></li>
+					<li><a href="week4_cultural.html">Privacy is Dead</a></li>
+					<li><a href="week5_cultural.html">Don't Be Afraid of Feedback, Welcome It!</a></li>
+					<li><a href="week5_technical.html">Class in Ruby, Simplified</a></li>
+					<li><a href="week6_technical.html">Variables Scope in Ruby</a></li>
+					<li><a href="week6_cultural.html">Stereotype Threat, Not!</a></li>
+					<li><label>Game</label></li>
+					<li><a href="../solo/solo.html">The Game of Game of Thrones</a></li>
+				</ul>
+			</aside>
+			<section id="container" class="main-section">
+				<div class="row">
+					<div class="large-12 columns">
+					</div>
+					<h2 id="atitle">Variables Scope in Ruby</h2>
+				</div>
+				<div class="row">
+
+					<div class="large-9 columns" role="content">
+						<article>
+							<h6 id="info">Written by <a href="https://www.facebook.com/kornslife?ref=hl">Supakorn Laohasongkram</a> on August 14th, 2014</h6>
+							<p>
+								There are six types of Ruby variables: global, local, class, instance, contant, and psuedo variables. Each type differs by its scope and behavior. To make the distinction clearer, we will go through each, one by one. Here is a summary...
+							</p><br>
+							<h4>Global Variable</h4>
+							<p>
+								Global variable works across all your code. You can identified the variable by dollar sign($) in front. (You can see the example below.) However, global variable should be used with caution since it would run through the whole code and you could easily forgot or unknowinly overwrite it. And this in turns, could effect your whole code.
+							</p>
+							<pre class="brush: ruby">
+$global_variable = 10
+class Class1 # call inside of class 1
+  def print_global 
+     puts "Global variable in Class1 is #$global_variable" 
+  end
+end 
+class Class2 # call inside of class 2
+  def print_global
+     puts "Global variable in Class2 is #$global_variable"
+  end
+end	
+
+global_variable # or call outside of class which output => 10
+class1obj = Class1.new
+class1obj.print_global # output => Global variable in Class2 is 10
+class2obj = Class2.new
+class2obj.print_global # output => Global variable in Class1 is 10
+							</pre>
+							<p>
+								As you can see, the global variable of global_variable could call in and outside of class anywhere.
+							</p>
+							<h4>Local Variable</h4>
+							<p>
+								Local variable works depending on the corresponding start and end of a statement. This could be identified by the "{}" sign or the designated syntax like "do" and "end" which defines the beginning and the end of a method. To defined a local variable simply write in lower case or begins with a underscore(_).
+							</p>
+							<pre class="brush: ruby">
+local_variable = 10 # first way of defining local variable
+_local_variable = 10 # second way of defining local variable
+
+class Class1 
+  def print_local 
+  	 local_variable = 10
+     puts "local variable in Class1 is #{local_variable}" 
+  end
+end 
+class Class2
+  def print_local
+     puts "local variable in Class2 is #{local_variable}"
+  end
+end	
+p local_variable # output => 10
+
+class1obj = Class1.new
+class1obj.print_local # output => local variable in Class1 is 10
+class2obj = Class2.new
+class2obj.print_local # output => "undefined local variable or method `local_variable'"
+							</pre>
+							<h4>Class Variable</h4>
+							<p>
+								Class variable is identified by the "@@" sign in front. The scope of this variable is inheritable all other instances of this class.
+							</p>
+							<pre class="brush: ruby">
+class Class1 
+  def print_class 
+  	 @@class_variable = 10
+     puts "Class variable in Class1 is #{@@class_variable}" 
+  end
+end 
+
+@@class_variable # output => Can't access. "warning: class variable access from toplevel" 
+
+class1obj = Class1.new # defining class instance
+class1obj.print_class # output => class variable in Class1 is 10
+
+class1obj2 = Class1.new # defining another class instance
+class1obj2.print_class # output => class variable in Class1 is 10
+
+class1obj3 = Class1.new # defining another class instance
+class1obj3.print_class # output => class variable in Class1 is 10
+							</pre>
+							<p>
+								From the example above, the class variable of @@class_variable is passed on through all of the class instances of Class1. 
+							</p>
+							<h4>Instance Variable</h4>
+							<p>
+								Instance Variable is identified by the "@" sign in front, the scope of this varible is only inside the class it is decleared upon.
+							</p>
+							<pre class="brush: ruby">
+class Class1 
+	attr_reader :instance_variable
+	def initialize(instance_variable)
+	  @instance_variable = instance_variable
+	end
+  def print_instance 
+     puts "Instance variable in Class1 is #{@instance_variable}" 
+  end
+  def print
+  	 puts "Instance variable in Class1 is #{@instance_variable}" 
+  end
+  def print2
+  	 puts "Instance variable in Class1 is #{@instance_variable}"   	
+  end
+end 
+
+class1obj = Class1.new(10) # defining new class instance with 10 as argument
+class1obj.print_instance # output => Instance variable in Class1 is 10
+class1obj.print # output => Instance variable in Class1 is 10
+class1obj.print2 # output => Instance variable in Class1 is 10
+instance_variable # output => "undefined local variable or method `instance_variable' for main:Object"
+							</pre>
+							<p>
+								You can see that the @instance_variable is shared among three methods inside Class1. And when the variable is call outside of Class1 it gives an error.
+							</p>
+							<h4>Constant Variable</h4>
+							<p>
+								Constant variable is identified by the all capitalized letters like so, "VAR = 10." If it is defined within a class then scope is only within that class. However, if the constant is defined outside of a class its scope becomes global.
+							</p>
+							<pre class="brush: ruby">
+BYE = "BYE"
+
+class Class1 
+	HELLO = "HELLO"
+	def greet
+	  p HELLO
+	end
+	def bye
+	  p BYE
+	end
+end 
+
+class1obj = Class1.new # defining new class instance
+class1obj.greet # output => "HELLO"
+class1obj.bye # output => "BYE"
+HELLO # output => Get an error saying "uninitialized constant HELLO"
+							</pre>
+						</article>
+					</div>
+					<aside class="large-3 columns">
+						<div class="panel">
+							<img id="me" src="../unit1_projects/images/logo.jpg">
+							<p>Hi, I am Korn, a beginner web developer, a designer, a buddhist fanatic, and an hobbyist philospher. Follow and like me from the icons below</p>
+							<hr>
+							<a href="https://www.facebook.com/kornslife?ref=hl"><i class="icon-facebook-rect"></i></a><hr>
+							<a href="https://twitter.com/klaoha06"><i class="icon-twitter-bird"></i></a><hr>
+							<a href="https://github.com/klaoha06"><i class="icon-github-circled"></i> </a><hr>
+						</div>
+						<div id="ref">
+						<h5>Reference</h5>
+						<ul class="side-nav">
+			<li><a href="http://www.tutorialspoint.com/ruby/ruby_variables.html">Ruby Variables, Constants and Literals</a></li>
+			<li><a href="http://www.techotopia.com/index.php/Ruby_Variable_Scope">Ruby Variable Scope</a></li>
+		</ul>
+		</div>
+	</aside>
+
+</div>
+
+<footer class="row">
+	<hr>
+	<div class="large-12 columns">
+		<div class="row">
+			<div class="large-9 columns">
+				<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
+			</div>
+			<div class="large-3 columns">
+				<ul class="inline-list right">
+					<li><a href="#top">To Top</a></li>
+<!-- 					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+</section> <!-- container -->
+<a class="exit-off-canvas"></a>
+</div>
+<script type="text/javascript" src="js/blog.js"></script>
+<script>
+	$(document).foundation();
+</script>
+<script type="text/javascript">
+	SyntaxHighlighter.all()
+	SyntaxHighlighter.defaults.toolbar = false;
+</script>
+</body>
+</html>
