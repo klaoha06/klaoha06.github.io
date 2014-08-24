@@ -60,7 +60,7 @@
 
 					<div class="large-9 columns" role="content">
 						<article>
-							<h6 id="info">Written by <a href="https://www.facebook.com/kornslife?ref=hl">Supakorn Laohasongkram</a> on August 14th, 2014</h6>
+							<h6 id="info">Written by <a href="https://www.facebook.com/kornslife?ref=hl">Supakorn Laohasongkram</a> on August 23th, 2014</h6>
 							<p>
 								I actually never tried hacking anything. However, after some research about "SQL injection," apparently SQL is easily hackable if one is not careful. This article aims to show some of the methods malicious hackers implemented to hack and exploit SQL database, then drives further into ways to prevent your site from being hacked.
 							</p>
@@ -73,92 +73,89 @@
 							</p>
 
 							<pre class="brush: sql">
-txtUserId = getRequestString("UserId");
-txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;</pre>
-							<p>
-								The first line fetches the input from user then insert that into a SELECT an SQL statement. Everything seems to be correct, but wait til you see this next code.
-							</p>
-							<h4>
-								What If This is What I Input? SQL Injection!
-							</h4>
-							<form>
-  Username: <input type="text" name="lname" value="1 or 1=1"><br>
-</form>
+								txtUserId = getRequestString("UserId");
+								txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;</pre>
+								<p>
+									The first line fetches the input from user then insert that into a SELECT an SQL statement. Everything seems to be correct, but wait til you see this next code.
+								</p>
+								<h4>
+									What If This is What I Input? SQL Injection!
+								</h4>
+								<form>
+									Username: <input type="text" name="lname" value="1 or 1=1"><br>
+								</form>
 
+								<pre class="brush: sql">
+									SELECT * FROM Users WHERE UserId = 1 or 1=1 
+									--BOOM! SHOW ALL FROM Users</pre>
+								<p>
+									The SQL statement would amazing be like so. The SQL above is perfectly valid and compatiable with the first code sample. And it will return all rows from the table Users, since WHERE 1=1 is always true. So now, I could access all of the information from users.
+								</p>
+								<h4>
+									Now Try This! Deleting Database
+								</h4>
+								<form>
+									Username: <input type="text" name="lname" size="30" value="1; DROP TABLE Suppliers;"><br>
+								</form>
+								<pre class="brush: sql">
+									SELECT * FROM Users WHERE UserId = 1; DROP TABLE Suppliers;
+									--BOOM! COLUMN Suppliers out the window!</pre>
+								<p>
+									Next thing you know the SQL Injection ended and began a new SQL statement for you saying "delete column suppliers!" Great..
+								</p>
+								<h4>
+									And This! Email Me Your Password
+								</h4>
+								Username: <input type="text" name="lname" size="100" value="; UPDATE users SET email = 'my_email@hotmale.com' WHERE userid = 1;"><br>
+								<input type="submit" value="I forgot my password please email me my password!">
+							</form>
 							<pre class="brush: sql">
-							SELECT * FROM Users WHERE UserId = 1 or 1=1 
-							--BOOM! SHOW ALL FROM Users
-</pre>
-<p>
-	The SQL statement would amazing be like so. The SQL above is perfectly valid and compatiable with the first code sample. And it will return all rows from the table Users, since WHERE 1=1 is always true. So now, I could access all of the information from users.
-</p>
-							<h4>
-								Now Try This! Deleting Database
-							</h4>
-														<form>
-  Username: <input type="text" name="lname" size="30" value="1; DROP TABLE Suppliers;"><br>
-</form>
-							<pre class="brush: sql">
-							SELECT * FROM Users WHERE UserId = 1; DROP TABLE Suppliers;
-							--BOOM! COLUMN Suppliers out the window!
-</pre>
-<p>
-	Next thing you know the SQL Injection ended and began a new SQL statement for you saying "delete column suppliers!" Great..
-</p>
-<h4>
-								And This! Email Me Your Password
-							</h4>
-  Username: <input type="text" name="lname" size="100" value="; UPDATE users SET email = 'my_email@hotmale.com' WHERE userid = 1"><br>
-  <input type="submit" value="I forgot my password please email me my password!">
-</form>
-							<pre class="brush: sql">
-SELECT *
-  FROM users
- WHERE userid = 1;
-      UPDATE users
-      SET email = 'my_email@hotmale.com'
-      WHERE userid = 1;
-</pre>
-<p>Now all I have to do is click on the forgot my password and wait for the password in my email! Yay!</p>
+								SELECT *
+								FROM users
+								WHERE userid = 1;
+								UPDATE users
+								SET email = 'my_email@hotmale.com'
+								WHERE userid = 1;</pre>
+							<p>Now all I have to do is click on the forgot my password and wait for the password in my email! Yay!</p>
 
-<h3>Measures Against SQL Injection</h3>
-<p>In my research, there is a definite pattern from the articles I read about how to deal with SQL Injection. All of them agree on one thing: <span class="redcolor">use SQL parameter.</span></p>
-<p>SQL parameter is a technique which seperate the user's input out from the SQL statement into a placeholder prior to excuting. By doing so, the input is converted and treated as "data" rather than actual code inside a SQL statement. And so SQL injection wouldn't make sense.</p>
+							<h3>Measures Against SQL Injection</h3>
+							<p>In my research, there is a definite pattern from the articles I read about how to deal with SQL Injection. All of them agree on one thing: <span class="redcolor">use SQL parameter.</span></p>
+							<p>SQL parameter is a technique which seperate the user's input out from the SQL statement into a placeholder prior to excuting. By doing so, the input is converted and treated as "data" rather than actual code inside a SQL statement. Consequently, SQL injection now doesn't make sense.</p>
 						</article>
 					</div>
 					<aside class="large-3 columns">
 						<div class="panel">
 							<img id="me" src="../unit1_projects/images/logo.jpg">
-							<p>Hi, I am Korn, a beginner web developer, a designer, a buddhist fanatic, and an hobbyist philospher. Follow and like me from the icons below</p>
+							<p>Hi, I am Korn, a beginner web developer, a designer, a buddhist fanatic, and an hobbyist philospher. Follow, like, and contact me from the icons below</p>
 							<hr>
 							<a href="https://www.facebook.com/kornslife?ref=hl"><i class="icon-facebook-rect"></i></a><hr>
 							<a href="https://twitter.com/klaoha06"><i class="icon-twitter-bird"></i></a><hr>
 							<a href="https://github.com/klaoha06"><i class="icon-github-circled"></i> </a><hr>
 						</div>
 						<div id="ref">
-						<h5>Reference</h5>
-						<ul class="side-nav">
-			<li><a href="http://en.wikipedia.org/wiki/SQL_injection">Wikipedia: SQL Injection</a></li>
-			<li><a href="http://www.w3schools.com/sql/sql_injection.asp">W3School: SQL Injection</a></li>
-			<li><a href="http://stackoverflow.com/questions/4892166/how-does-sqlparameter-prevent-sql-injection">Stackoverflow: How SQL parameter prevent SQL injection</a></li>
-		</ul>
-			<li><a href="http://www.unixwiz.net/techtips/sql-injection.html">SQL Injection Attacks by Examples</a></li>
-		</ul>
-		</div>
-	</aside>
+							<h5>Reference</h5>
+							<ul class="side-nav">
+								<li><a href="http://en.wikipedia.org/wiki/SQL_injection">Wikipedia: SQL Injection</a></li>
+								<li><a href="http://www.w3schools.com/sql/sql_injection.asp">W3School: SQL Injection</a></li>
+								<li><a href="http://stackoverflow.com/questions/4892166/how-does-sqlparameter-prevent-sql-injection">Stackoverflow: How SQL parameter prevent SQL injection</a></li>
+							</ul>
+							<li><a href="http://www.unixwiz.net/techtips/sql-injection.html">SQL Injection Attacks by Examples</a></li>
+						</ul>
+					</div>
+				</aside>
 
-</div>
-
-<footer class="row">
-	<hr>
-	<div class="large-12 columns">
-		<div class="row">
-			<div class="large-9 columns">
-				<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
 			</div>
-			<div class="large-3 columns">
-				<ul class="inline-list right">
-					<li><a href="#top">To Top</a></li>
+
+			<footer class="row">
+				<hr>
+				<div class="large-12 columns">
+					<div class="row">
+						<div class="large-9 columns">
+							<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
+						</div>
+						<div class="large-3 columns">
+							<ul class="inline-list right">
+								<li><a href="#top">To Top</a></li>
 <!-- 					<li><a href="#">Link 2</a></li>
 					<li><a href="#">Link 3</a></li>
 					<li><a href="#">Link 4</a></li> -->
