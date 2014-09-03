@@ -1,0 +1,171 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Korn's Tech Blog</title>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<link rel="stylesheet" href="css/styleSH.css"/>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body name="top">
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<nav class="tab-bar">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				</section>
+				<section class="right tab-bar-section">
+					<h6>Korn's Tech Blog</h6>
+				</section>
+			</nav>
+
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					<li><a href="../index.html"><span style="font-size: 1.5em;">Index</span></a></li>
+					<li><label>Projects</label></li>
+					<li><a href="../unit1_projects/dbc1.html">DBC1</a></li>
+					<li><a href="../unit1_projects/dbc2.html">DBC2</a></li>
+					<li><a href="../unit1_projects/wireframe_sites.html">Wireframing</a></li>
+					<li><a href="../unit1_projects/my_wireframe.html">Site Planning</a></li>
+					<li><a href="../w2r/starting-point.html">Group Responsive Design</a></li>
+					<li><a href="../gps1.1/gps1.1.html">GPS1.1</a></li>
+					<li><label>Blogs</label></li>
+					<li><a href="week1_technical.html">My Favorite Sites</a></li>
+					<li><a href="week1_cultural.html">Take Charge of Your Edu</a></li>
+					<li><a href="week2_technical.html">Inline or Inline-block</a></li>
+					<li><a href="week3_technical.html">Why Javascript?</a></li>
+					<li><a href="week3_cultural.html">Know Thy Thinking Style</a></li>
+					<li><a href="week4_technical.html">What is Enumerable in Ruby?</a></li>
+					<li><a href="week4_cultural.html">Privacy is Dead</a></li>
+					<li><a href="week5_cultural.html">Don't Be Afraid of Feedback, Welcome It!</a></li>
+					<li><a href="week5_technical.html">Class in Ruby, Simplified</a></li>
+					<li><a href="week6_technical.html">Variables Scope in Ruby</a></li>
+					<li><a href="week6_cultural.html">Stereotype Threat, Not!</a></li>
+					<li><a href="week7_technical.html">Hacking SQL</a></li>
+					<li><a href="week7_cultural.html">The Way Out is In</a></li>
+					<li><a href="week8_technical.html">How Good is Your Algorithm? : Big-O Notation</a></li>
+					<li><label>Game</label></li>
+					<li><a href="../solo/solo.html">The Game of Game of Thrones</a></li>
+				</ul>
+			</aside>
+			<section id="container" class="main-section">
+				<div class="row">
+					<div class="large-12 columns">
+					</div>
+					<h2 id="atitle">How Good is Your Algorithm? : Big-O Notation</h2>
+				</div>
+				<div class="row">
+
+					<div class="large-9 columns" role="content">
+						<article>
+							<h6 id="info">Written by <a href="https://www.facebook.com/kornslife?ref=hl">Supakorn Laohasongkram</a> on September 3rd, 2014</h6>
+							<p>
+								It's one thing to write a working algorithm; but another to write one that works yet performs well. The performance for an algorithm is measured by how much resources an algorithm requires to perform a task. These can be the time, space, cpu, and memory it requires. However, there is another measurement which this article will look at specifically. It analyzes how algorithm performs in relation to the size of input. This measurement is called "Big-O".
+							</p>
+							<p><span class="redcolor">Big O notation is the rate of performance for an algorithm to output as the size of the input increases.</span> The techical term for this rate is known as <span class="redcolor">"Complexity".</span> The lower the complexity the better an algorithm performs as size of input increases.</p>
+							<h4>Big-O mainly cares about Big Input</h4>
+							<p>
+								Big-O ignores all smaller constants and other slow growings terms and mainly differentiate an algorithm based on its general pattern.
+							</p>
+							<p> For example, if... <br><pre class="brush: ruby">T(n) = n - n**2.</pre> Imagine inputing some really big number like 1,000,000 into variable "n". The equation would then be...
+							<pre class="brush: ruby">
+								T(10000000) = 10000000 - 10000000*10000000</pre>
+							one millions times one millions is much more significant than the minus one million in front. So in this case, the constant like minus one million is ignored. And what you get is simply...
+							<pre class="brush: ruby">
+								T(n) = N**2</pre>
+							And we could say "T(n) grows at the order of (n ** 2) or the Big-O of this algorithm is (N ** 2)."
+							</p>
+							<h4>General Types of Big-O</h4>
+							<p>Depending on the algorithm, we could generalize each algorithm's Big-O relation to its size of input as such...</p>
+<table border="1" cellspacing="0" cellpadding="4" summary="example O(N) values">
+<tr><th>Size of Input</th><th><i>constant</i></th><th><i>logarithmic</i></th><th><i>linear</i></th><th>&nbsp;</th><th><i>quadratic</i></th><th><i>cubic</i></th></tr>
+<tr valign="bottom"><th>n</th><th>O(1)</th>
+    <th>O(log N)</th>
+    <th>O(N)</th>
+    <th>O(N log N)</th>
+    <th>O(N<sup>2</sup>)
+    </th><th>O(N<sup>3</sup>)</th></tr> 
+<tr align="right"><td>   1</td><td>1</td><td> 1</td><td>    1</td><td>     1</td><td>        1</td><td>            1</td></tr>
+<tr align="right"><td>   2</td><td>1</td><td> 1</td><td>    2</td><td>     2</td><td>        4</td><td>            8</td></tr>
+<tr align="right"><td>   4</td><td>1</td><td> 2</td><td>    4</td><td>     8</td><td>       16</td><td>           64</td></tr>
+<tr align="right"><td>   8</td><td>1</td><td> 3</td><td>    8</td><td>    24</td><td>       64</td><td>          512</td></tr>
+<tr align="right"><td>  16</td><td>1</td><td> 4</td><td>   16</td><td>    64</td><td>      256</td><td>        4,096</td></tr>
+<tr align="right"><td>1,024</td><td>1</td><td>10</td><td>1,024</td><td>10,240</td><td>1,048,576</td><td>1,073,741,824</td></tr>
+<tr align="right"><td>1,048,576</td><td>1</td><td>20</td><td>1,048,576</td><td>20,971,520</td><td>10<sup>12</sup></td><td>10<sup>16</sup></td></tr>
+</table><br>
+<p>Let's look at one example of Binary Search Algorithm. And determine what type of Big-O it is.</p>
+
+<h4>Binary Search</h4>
+<p>
+	Binary search is a technique used to search sorted data sets. It works by selecting the middle element of the data set, essentially the median, and compares it against a target value. If the values match it will return success. If the target value is higher than the value of the probe element it will take the upper half of the data set and perform the same operation against it. Likewise, if the target value is lower than the value of the probe element it will perform the operation against the lower half. It will continue to halve the data set with each iteration until the value has been found or until it can no longer split the data set.</p>
+	<p>
+This type of algorithm is described as <span class="redcolor">O(log N)</span>. The iterative halving of data sets described in the binary search example produces a growth curve that peaks at the beginning and slowly flattens out as the size of the data sets increase e.g. an input data set containing 10 items takes one second to complete, a data set containing 100 items takes two seconds, and a data set containing 1000 items will take three seconds. Doubling the size of the input data set has little effect on its growth as after a single iteration of the algorithm the data set will be halved and therefore on a par with an input data set half the size. This makes algorithms like binary search extremely efficient when dealing with large data sets.
+</p>
+							<h4>
+								Big-O measures a algorithm based on its worst case senario.
+							</h4>
+							<p>
+								It is essential to understand that Big-O is always measured from the worst case senario of that particular algorithm. For example, if the algorithm has different paths of the if and elsif statements, to measure Big-O would requires the algorithm to take the longest and most demanding path as the measurement.
+							</p>
+							<h4>Conclusion</h4>
+							<p>
+								Big-O measures the performance of an algorithm in relation to the size of input. Since Complexity measures ONLY how well an algorithm function, complexity affects performance but not the other way around. Even though Big-O is a good indicator of how a program might perform but this is still very theoretical. According to my research, a better and more practical measurement would be to use benchmark. For further reading, please go the reference section to learn more.
+								</p>
+						</article>
+					</div>
+					<aside class="large-3 columns">
+						<div class="panel">
+							<img id="me" src="../unit1_projects/images/logo.jpg">
+							<p>Hi, I am Korn, a beginner web developer, a designer, a buddhist fanatic, and an hobbyist philospher. Follow, like, and contact me from the icons below</p>
+							<hr>
+							<a href="https://www.facebook.com/kornslife?ref=hl"><i class="icon-facebook-rect"></i></a><hr>
+							<a href="https://twitter.com/klaoha06"><i class="icon-twitter-bird"></i></a><hr>
+							<a href="https://github.com/klaoha06"><i class="icon-github-circled"></i> </a><hr>
+						</div>
+						<div id="ref">
+							<h5>Reference</h5>
+							<ul class="side-nav">
+								<li><a href="http://web.mit.edu/16.070/www/lecture/big_o.pdf">MIT: Big O Notation</a></li>
+								<li><a href="http://www.leepoint.net/notes-java/algorithms/big-oh/bigoh.html">Algorithms: Big-Oh Notation</a></li>
+								<li><a href="http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/">A Beginners' Guide to Big-O Notation</a></li>
+								<li><a href="http://en.wikipedia.org/wiki/Big_O_notation#Use_in_computer_science">Wikipedia: Big-O Notation</a></li>
+						</ul>
+					</div>
+				</aside>
+
+			</div>
+
+			<footer class="row">
+				<hr>
+				<div class="large-12 columns">
+					<div class="row">
+						<div class="large-9 columns">
+							<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
+						</div>
+						<div class="large-3 columns">
+							<ul class="inline-list right">
+								<li><a href="#top">To Top</a></li>
+<!-- 					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+</section> <!-- container -->
+<a class="exit-off-canvas"></a>
+</div>
+<script type="text/javascript" src="js/blog.js"></script>
+<script>
+	$(document).foundation();
+</script>
+<script type="text/javascript">
+	SyntaxHighlighter.all()
+	SyntaxHighlighter.defaults.toolbar = false;
+</script>
+</body>
+</html>
