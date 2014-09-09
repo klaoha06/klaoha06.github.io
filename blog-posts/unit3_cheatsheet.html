@@ -1,0 +1,173 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Korn's Tech Blog</title>
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<link rel="stylesheet" href="css/styleSH.css"/>
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body name="top">
+	<div class="off-canvas-wrap" data-offcanvas>
+		<div class="inner-wrap">
+			<nav class="tab-bar">
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				</section>
+				<section class="right tab-bar-section">
+					<h6>Korn's Tech Blog</h6>
+				</section>
+			</nav>
+
+			<aside class="left-off-canvas-menu">
+				<ul class="off-canvas-list">
+					<li><a href="../index.html"><span style="font-size: 1.5em;">Index</span></a></li>
+					<li><label>Projects</label></li>
+					<li><a href="../unit1_projects/dbc1.html">DBC1</a></li>
+					<li><a href="../unit1_projects/dbc2.html">DBC2</a></li>
+					<li><a href="../unit1_projects/wireframe_sites.html">Wireframing</a></li>
+					<li><a href="../unit1_projects/my_wireframe.html">Site Planning</a></li>
+					<li><a href="../w2r/starting-point.html">Group Responsive Design</a></li>
+					<li><a href="../gps1.1/gps1.1.html">GPS1.1</a></li>
+					<li><label>Blogs</label></li>
+					<li><a href="week1_technical.html">My Favorite Sites</a></li>
+					<li><a href="week1_cultural.html">Take Charge of Your Edu</a></li>
+					<li><a href="week2_technical.html">Inline or Inline-block</a></li>
+					<li><a href="week3_technical.html">Why Javascript?</a></li>
+					<li><a href="week3_cultural.html">Know Thy Thinking Style</a></li>
+					<li><a href="week4_technical.html">What is Enumerable in Ruby?</a></li>
+					<li><a href="week4_cultural.html">Privacy is Dead</a></li>
+					<li><a href="week5_cultural.html">Don't Be Afraid of Feedback, Welcome It!</a></li>
+					<li><a href="week5_technical.html">Class in Ruby, Simplified</a></li>
+					<li><a href="week6_technical.html">Variables Scope in Ruby</a></li>
+					<li><a href="week6_cultural.html">Stereotype Threat, Not!</a></li>
+					<li><a href="week7_technical.html">Hacking SQL</a></li>
+					<li><a href="week7_cultural.html">The Way Out is In</a></li>
+					<li><a href="week8_technical.html">How Good is Your Algorithm? : Big-O Notation</a></li>
+					<li><a href="week8_cultural.html">How to Live with Broken Relationship</a></li>
+					<li><label>Game</label></li>
+					<li><a href="../solo/solo.html">The Game of Game of Thrones</a></li>
+				</ul>
+			</aside>
+			<section id="container" class="main-section">
+				<div class="row">
+					<div class="large-12 columns">
+					</div>
+					<h2 id="atitle">Git Cheatsheet</h2>
+				</div>
+				<div class="row">
+
+					<div class="large-9 columns" role="content">
+						<article>
+							<h6 id="info">Written by <a href="https://www.facebook.com/kornslife?ref=hl">Supakorn Laohasongkram</a> on September 8rd, 2014</h6>
+
+							<h4>Connecting your Local Git to Your GitHub Repository</h4>
+							<li>Go to GitHub. Create an account and set up a new repo.</li>
+							<li>Copy the repo 'http'</li>
+							<img src="img/s.png">
+							<li>Go to Terminal</li>
+							<li>Navigate to the folder where you want to link your repo</li>
+							<li>Type the following code follow by the specific http of your repo.</li>
+							<pre class="brush: ruby">
+								git clone 'http'</pre>
+
+							<h4>Checking/Creating/Changing/Deleting Branch</h4>
+							<li>List all existing branches</li>
+							<pre class="brush: ruby">
+								git branch </pre>
+							<li>Creating new branch</li>
+							<pre class="brush: ruby">
+								git branch -b 'branch_name'</pre>
+							<li>Switch to the designated branch</li>
+							<pre class="brush: ruby">
+								git checkout 'branch_name'</pre>
+							<li>Deleting a branch</li>
+							<pre class="brush: ruby">git push origin --delete 'branchName'</pre>
+
+							<h4>Staging/Committing/Pushing Files</h4>
+							<li>Checking Current Status</li>
+							<pre class="brush: ruby">
+								git status</pre>
+							<li>Staging All Files</li>
+							<pre class="brush: ruby">
+								git add -A</pre>
+							<li>Commiting Staged Files</li>
+							<pre class="brush: ruby">
+								git commit -m "comment"</pre>		
+							</p>
+
+							<h4>Pushing Files to GitHub</h4>
+							<pre class="brush: ruby">
+								git push 'remote' 'branch'</pre>	
+							<h4>Setting Up New Remote</h4>
+							<li>Checking Remotes</li>
+							<pre class="brush: ruby">
+								git remote -v</pre>
+							<li>Adding new remote</li>
+							<pre class="brush: ruby">git remote add upstream 'http'</pre>
+
+							<h4>Fetching Files from GitHub</h4>
+							<li>Fetch files from Upstream</li>
+							<pre class="brush: ruby">
+								git fetch upstream</pre>
+							<li>Merging files from Upstream to branch</li>
+							<pre class="brush: ruby">
+								git merge upstream/master</pre>
+						</article>
+					</div>
+					<aside class="large-3 columns">
+						<div class="panel">
+							<img id="me" src="../unit1_projects/images/logo.jpg">
+							<p>Hi, I am Korn, a beginner web developer, a designer, a buddhist fanatic, and an hobbyist philospher. Follow, like, and contact me from the icons below</p>
+							<hr>
+							<a href="https://www.facebook.com/kornslife?ref=hl"><i class="icon-facebook-rect"></i></a><hr>
+							<a href="https://twitter.com/klaoha06"><i class="icon-twitter-bird"></i></a><hr>
+							<a href="https://github.com/klaoha06"><i class="icon-github-circled"></i> </a><hr>
+						</div>
+						<div id="ref">
+							<h5>Reference</h5>
+							<ul class="side-nav">
+								<li><a href="http://ndpsoftware.com/git-cheatsheet.html#loc=workspace;">GIT Cheatsheet</a></li>
+								<li><a href="http://www.leepoint.net/notes-java/algorithms/big-oh/bigoh.html">Algorithms: Big-Oh Notation</a></li>
+								<li><a href="http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/">A Beginners' Guide to Big-O Notation</a></li>
+								<li><a href="http://en.wikipedia.org/wiki/Big_O_notation#Use_in_computer_science">Wikipedia: Big-O Notation</a></li>
+						</ul>
+					</div>
+				</aside>
+
+			</div>
+
+			<footer class="row">
+				<hr>
+				<div class="large-12 columns">
+					<div class="row">
+						<div class="large-9 columns">
+							<p>&copy; Copyright Supakorn Laohasongkram 2014</p>
+						</div>
+						<div class="large-3 columns">
+							<ul class="inline-list right">
+								<li><a href="#top">To Top</a></li>
+<!-- 					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+					<li><a href="#">Link 4</a></li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+</section> <!-- container -->
+<a class="exit-off-canvas"></a>
+</div>
+<script type="text/javascript" src="js/blog.js"></script>
+<script>
+	$(document).foundation();
+</script>
+<script type="text/javascript">
+	SyntaxHighlighter.all()
+	SyntaxHighlighter.defaults.toolbar = false;
+</script>
+</body>
+</html>
