@@ -73,20 +73,20 @@
 							<li>Type the following code follow by the specific http of your repo.</li>
 							<pre class="brush: ruby">
 								git clone 'http'</pre>
-
+							<hr>
 							<h4>Checking/Creating/Changing/Deleting Branch</h4>
 							<li>List all existing branches</li>
 							<pre class="brush: ruby">
 								git branch </pre>
 							<li>Creating new branch</li>
 							<pre class="brush: ruby">
-								git branch -b 'branch_name'</pre>
+								git branch -b 'branch'</pre>
 							<li>Switch to the designated branch</li>
 							<pre class="brush: ruby">
-								git checkout 'branch_name'</pre>
+								git checkout 'branch'</pre>
 							<li>Deleting a branch</li>
-							<pre class="brush: ruby">git push origin --delete 'branchName'</pre>
-
+							<pre class="brush: ruby">git push origin --delete 'branch'</pre>
+							<hr>
 							<h4>Staging/Committing/Pushing Files</h4>
 							<li>Checking Current Status</li>
 							<pre class="brush: ruby">
@@ -98,24 +98,36 @@
 							<pre class="brush: ruby">
 								git commit -m "comment"</pre>		
 							</p>
-
-							<h4>Pushing Files to GitHub</h4>
+							<li>Pushing/Uploading Files from local hard drive to GitHub</li>
 							<pre class="brush: ruby">
-								git push 'remote' 'branch'</pre>	
-							<h4>Setting Up New Remote</h4>
-							<li>Checking Remotes</li>
+								git push 'remote' 'branch'</pre>
+							<hr>	
+							<h4>Setting Up New Remote for Your Local Repo</h4>
+							<li>Checking Current Remotes</li>
 							<pre class="brush: ruby">
 								git remote -v</pre>
-							<li>Adding new remote</li>
+							<li>Adding new upstream</li>
 							<pre class="brush: ruby">git remote add upstream 'http'</pre>
-
-							<h4>Fetching Files from GitHub</h4>
+							<hr>
+							<h4>Fetching Files from GitHub to Your Local Repo</h4>
 							<li>Fetch files from Upstream</li>
 							<pre class="brush: ruby">
 								git fetch upstream</pre>
 							<li>Merging files from Upstream to branch</li>
 							<pre class="brush: ruby">
-								git merge upstream/master</pre>
+								git merge upstream/'branch'</pre>
+							<li>Fetch and Merge files</li>
+							<pre class="brush: ruby">
+								git pull 'remote'</pre>
+							<hr>
+							<h4>Dealing with Conflicts</h4>
+							<li>Display unstaged changes</li>
+							<pre class="brush: ruby">
+								git diff</pre>
+							<li>Display changes compare to a specific branch or commit</li>
+							<pre class="brush: ruby">
+								git diff 'commit/branch'</pre>
+							<p style="font-style: italic;">* you actually make the changes in your text editor</p>
 						</article>
 					</div>
 					<aside class="large-3 columns">
@@ -131,9 +143,8 @@
 							<h5>Reference</h5>
 							<ul class="side-nav">
 								<li><a href="http://ndpsoftware.com/git-cheatsheet.html#loc=workspace;">GIT Cheatsheet</a></li>
-								<li><a href="http://www.leepoint.net/notes-java/algorithms/big-oh/bigoh.html">Algorithms: Big-Oh Notation</a></li>
-								<li><a href="http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/">A Beginners' Guide to Big-O Notation</a></li>
-								<li><a href="http://en.wikipedia.org/wiki/Big_O_notation#Use_in_computer_science">Wikipedia: Big-O Notation</a></li>
+								<li><a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">GitHub: Git Cheatsheet</a></li>
+								<li><a href="http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf">Git Cheatsheet</a></li>
 						</ul>
 					</div>
 				</aside>
