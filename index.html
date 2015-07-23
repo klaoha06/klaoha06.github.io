@@ -5,6 +5,16 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>Korn's Tech Blog</title>
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+	 
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
+	 
+	<!--  jQuery 1.7+  -->
+<!-- 	<script src="jquery-1.9.1.min.js"></script>
+ -->	 
+	<!-- Include js plugin -->
 	<link rel="stylesheet" href="style1.css"/>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -16,9 +26,12 @@
 				<section class="left-small">
 					<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
 				</section>
-				<section class="right tab-bar-section">
+				<section class="left" style="margin-left: 65px;">
 					<h6>Korn's Tech Blog</h6>
 				</section>
+<!-- 				<section class="middle tab-bar-section">
+				      <h1 class="title">Foundation</h1>
+				    </section> -->
 			</nav>
 
 			<aside class="left-off-canvas-menu">
@@ -52,29 +65,128 @@
 					<li><a href="solo/solo.html">The Game of Game of Thrones</a></li>
 				</ul>
 			</aside>
-			<section id="container" class="main-section">
+			<section id="container" class="main-section fullscreen">
 				<header id="title">
 					<h1 style="font-family: yo; font-size: 5em; color:black; text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
 					">Korn's <span class="redcolor" style="font-family: tech3; font-size:1.3em;">Tech</span> Blog</h1>
 				</header>
 				<div id="gridcontainer" class="js-isotope" data-isotope-options='{ "columnWidth": 500, "itemSelector": ".item", "stamp": ".stamp" }'>
-					<div class="row">
-						<div class="item large-4 medium-6 small-12 columns">
+					<div class="row" data-equalizer>
+						<div class="item large-4 medium-6 small-12 columns" data-equalizer-watch>
 							<div class="box red">
 								<p><span style="font-size: 1.5em;">Welcome!</span></p>
-								<p>..to my GitHub Page! My name is Korn. I am currently working my way toward becoming a junior web developer! And this page is my first step in my little journey. To navigate through all my works thus far please click on the links to your left.<br><br><br>Enjoy and have a wonderful day!</p>
+								<hr>
+								<p>..to my GitHub Page! My name is Korn. This site is created for you to get to know me better about the kind of tech work I do. And what are my pooints of view on the lastest trends and technologies. Bellow are my porfolio for you to see what kind of tech work I have dabbling with. To navigate through all my works thus far please click on the links to your left.<br><br><br>Enjoy and have a wonderful day!</p>
 							</div>
 						</div>
-						<div class="item large-4 medium-6 small-12 columns">
+						<div class="item large-4 medium-6 small-12 columns" data-equalizer-watch>
 							<div class="box black">
-								<span style="font-size: 1.2em; line-height:150%;">A Little Something About Myself</span><br><br>
-								<p>I am 26 years. Born and raised in Bangkok, Thailand. Went to college in Indiana, USA at Earlham College. Majored in Politics. After college, I became a Theravada buddhist monk for 1 year. Afterward, I worked at the temple organizing meditation courses for 1 year. Now, I am interested in programming and starting my this journey at Dev Bootcamp.</p>
+								<span style="font-size: 1.2em; line-height:150%;">A Little Something About Myself</span>
+								<hr>
+								<p>I am 26 years. Born and raised in Bangkok, Thailand. Went to college in Indiana, USA at Earlham College. Majored in Politics. After college, I became a Theravada buddhist monk for 1 year. Afterward, I worked for my family in a rice mills factory while also helping a local temple organizing meditation courses. And out of all that, when I have free time. I code!</p>
 							</div>
 						</div>
-						<div class="item large-4 medium-6 small-12 columns">
+						<div class="item large-4 medium-6 small-12 columns" data-equalizer-watch>
 							<div class="box red">
 
-								<p><span style="font-size: 1.2em; line-height:150%;">Dev Bootcamp</span><br><br> ..is an immersive 9-week computer programming program founded by Shereef Bishay, Jesse Farmer, and Dave Hoover in February 2012. The creation of this site as well as all the works you will find on this site are all part of the Phase 0 preparation prior to joining Dev Bootcamp on-site in September 2014. Please browse through and glimpse into what we boots have been up to!</p>
+								<p><span style="font-size: 1.2em; line-height:150%;">Projects</span><hr>
+									<ul>
+										<li><a href="http://128.199.95.219:3000/"><p>Suanmokkh.org</p></a>
+</li>								
+										<li><a href="http://puanjai.com"><p>Puanjai.com</p></a></li>								
+										<li><a href="https://github.com/klaoha06/Kronos"><p>Kronos</p></a></li>		
+										<li><a href="https://www.facebook.com/collegelovenature"><p>College of Love and Nature</p></a></li>								
+										<li><a href="https://www.facebook.com/carpoolthailand"><p>Carpool Thailand</p></a></li>								
+										<li><a href="https://www.facebook.com/kornslife"><p>Blog</p></a></li>								
+									</ul>
+								 </p>
+							</div>
+						</div>
+
+					</div> <!-- row -->
+					</div> <!-- gridcontainer -->
+					<div class="text-center" style="margin: 0 15px 15px 15px;; padding: 0 15px 15px 15px;">
+						<h2 style="text-shadow:none;"><small>"Design with <span class="redcolor">aesthetic</span>. Code with <span class="redcolor">precision</span>."</small></h2>
+					<a href="#portfolio" class="button floatCenter small-red"  style="font-size: 1.1em; width:200px;">See My Work!</a>
+					</div>
+					<!-- <hr style="border-top-color: red"> -->
+
+					</section> <!-- container -->
+								<section id="container" class="main-section">
+<!-- 				<header id="title">
+					<h1 style="font-family: yo; font-size: 5em; color:black; text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+					">Korn's <span class="redcolor" style="font-family: tech3; font-size:1.3em;">Tech</span> Blog</h1>
+				</header> -->
+				<a name="portfolio"></a>
+				<h2 data-magellan-destination="portfolio" class="text-center">Portfolio</h2>
+
+				<div>
+					<div class="row">
+						<div class="item large-12 columns">
+							<div class="box small-red">
+								<a href="http://puanjai.com"><h3>PUANJAI.COM</h3></a>
+								<hr>
+								<blockquote><strong>Purpose: </strong>This website is create for fun. It allows people to ask difficult questions in life online while the community help one another to response to those in need. The community is still small but it is a tight community.</blockquote>
+								<h5>How Its Made:</h5>
+								<div class="row">
+									<div class="medium-6 columns">
+									<p>BACKEND</p>
+								    <ul>
+								      <li>Node.js</li>
+								      <li>MongoDB</li>
+								      <li>ElasticSearch</li>
+								    </ul>
+								  </div>
+								  <div class="medium-6 columns">
+									<p>FRONTEND</p>
+								    <ul>
+								      <li>Angular.js</li>
+								      <li>Bootstrap</li>
+								    </ul>
+								 </div>
+								 </div>
+								 <a href="http://puanjai.com" class="button floatCenter small-red haveMargin">View Live</a>
+
+								<div class="owl-demo owl-carousel owl-theme">
+								  <div class="item shadow"><img src="assets/images/puanjai1.png" alt="The Last of us"></div>
+								  <div class="item shadow"><img src="assets/images/puanjai2.png" alt="GTA V"></div>
+								  <div class="item shadow"><img src="assets/images/puanjai3.png" alt="Mirror Edge"></div>
+								  <div class="item shadow"><img src="assets/images/puanjai4.png" alt="Mirror Edge"></div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- row -->
+					<div class="row">
+						<div class="item large-12 columns">
+							<div class="box small-black">
+								<a href="http://128.199.95.219:3000/"><h3>SUANMOKKH.ORG</h3></a>
+								<hr>
+								<blockquote><strong>Purpose: </strong>This website is currently being developed for one of the most established Buddhist temple in Thailand. It functions is to serve pdf files, audios and other medias in order to allow people to easily acces the vast amount of Buddhist resources.</blockquote>
+								<h5>How Its Made:</h5>
+								<div class="row">
+									<div class="medium-6 columns">
+									<p>BACKEND</p>
+								    <ul>
+								      <li>Ruby on Rails</li>
+								      <li>MongoDB</li>
+								      <li>ActiveAdmin</li>
+								    </ul>
+								  </div>
+								  <div class="medium-6 columns">
+									<p>FRONTEND</p>
+								    <ul>
+								      <li>Bootstrap</li>
+								    </ul>
+								 </div>
+								 </div>
+								 <a href="http://128.199.95.219:3000/" class="button floatCenter small-red haveMargin">View Live</a>
+								<div class="owl-demo owl-carousel owl-theme">
+								  <div class="item shadow"><img src="assets/images/suanmokkh1.png" alt="The Last of us"></div>
+								  <div class="item shadow"><img src="assets/images/suanmokkh2.png" alt="GTA V"></div>
+								  <div class="item shadow"><img src="assets/images/suanmokkh3.png" alt="Mirror Edge"></div>
+								  <div class="item shadow"><img src="assets/images/suanmokkh4.png" alt="Mirror Edge"></div>
+								  <div class="item shadow"><img src="assets/images/suanmokkh5.png" alt="Mirror Edge"></div>
+								</div>
 							</div>
 						</div>
 					</div> <!-- row -->
@@ -87,7 +199,37 @@
 				</div> 
 				<script src="blog-posts/js/fo.js"></script>
 				<script>
-					$(document).foundation();
+					$(document).foundation('offcanvas', 'reflow');
 				</script>
+				<script src="assets/owl-carousel/owl.carousel.js"></script>
+				<script src="assets/js/foundation.min.js"></script>
+				<script>
+					$(function() {
+					  $('a[href*=#]:not([href=#])').click(function() {
+					    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					      var target = $(this.hash);
+					      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					      if (target.length) {
+					        $('html,body').animate({
+					          scrollTop: target.offset().top
+					        }, 1000);
+					        return false;
+					      }
+					    }
+					  });
+					});
+				 
+				  $(".owl-demo").owlCarousel({
+				 
+				      autoPlay: 4000, //Set AutoPlay to 3 seconds
+				 
+				      items : 1,
+				      itemsDesktop : [1199,3],
+				      itemsDesktopSmall : [979,3]
+				 
+				  });
+					 
+				</script>
+
 			</body>
 			</html>
