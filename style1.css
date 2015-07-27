@@ -87,9 +87,9 @@ h4 {
 /*nav*/
 ul.off-canvas-list li {
 	text-align: center;
-	font-family: tech3;
-	font-size: 1.1em;
-	font-weight: bolder;
+	font-family: yo;
+	font-size: 1em;
+	/*font-weight: bolder;*/
 	color:white;
 }
 
