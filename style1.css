@@ -17,10 +17,10 @@ meta.foundation-version{font-family:"/5.5.2/"}meta.foundation-mq-small{font-fami
 body {
 background: url('unit1_projects/images/graphy/graphy1.png');
 }
-#container {
+/*#container {
 	margin: 0 auto;
 	width: 80%;
-}
+}*/
 /*header*/
 h1 {
 	font-size: 6em;
@@ -119,9 +119,12 @@ nav.tab-bar {
 	margin: 10px 20px;
 	padding:15px 30px;
 }
-.columns p, .columns li {
-	line-height: 150%;
+.columns p {
+	line-height: 200%;
 	text-align: justify;
+}
+.columns li {
+	line-height: 300%;
 }
 .small-red {
 	box-shadow: 3px 3px red;
