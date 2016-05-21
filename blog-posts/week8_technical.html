@@ -74,10 +74,10 @@
 							<p>
 								Big-O ignores all smaller constants and other slow growings terms and mainly differentiate an algorithm based on its general pattern.
 							</p>
-							<p> For example, if... <br><pre class="brush: ruby">T(n) = n - n**2.</pre> Imagine inputing some really big number like 1,000,000 into variable "n". The equation would then be...
+							<p> For example, if... <br><pre class="brush: ruby">T(n) = n + n**2.</pre> Imagine inputing some really big number like 1,000,000 into variable "n". The equation would then be...
 							<pre class="brush: ruby">
-								T(10000000) = 10000000 - 10000000*10000000</pre>
-							one millions times one millions is much more significant than the minus one million in front. So in this case, the constant like minus one million is ignored. And what you get is simply...
+								T(10000000) = 10000000 + 10000000*10000000</pre>
+							one millions times one millions is much more significant than the plus one million in front. So in this case, the constant like plus one million is ignored. And what you get is simply...
 							<pre class="brush: ruby">
 								T(n) = N**2</pre>
 							And we could say "T(n) grows at the order of (n ** 2) or the Big-O of this algorithm is (N ** 2)."
